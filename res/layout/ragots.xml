@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:background="@drawable/fond_date_ragot"
+	android:focusableInTouchMode="true"
+	android:focusable="true"
+	android:id="@+id/llMainLayoutForRagot">
+ 	<LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+	 	android:id="@+id/llSecondLayoutForRagot">
+	    <EditText android:id="@+id/etRagot"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:text="IPQ..."
+                android:inputType="textMultiLine"
+                android:scrollHorizontally="false"
+                android:nextFocusUp="@+id/etRagot" android:nextFocusLeft="@+id/etRagot"/>
+	    <Button android:id="@+id/bRagot"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:text="c==8"
+	    	/>
+    </LinearLayout>
+  
+	<ListView
+		android:id="@+id/lvRagots"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+  android:cacheColorHint="#ffffffff"
+  android:background="#ffffffff">
+	</ListView>
+  
+</LinearLayout>
+
+

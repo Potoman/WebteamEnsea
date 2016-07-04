@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  <ScrollView
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:scrollbars="vertical">
+    <TextView 
+    android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="
+		Historique des versions :\n\n
+		-4.Kaynasou.2 :\n
+		--Bug corrigés :\n
+		---Bouton inutile sur la vue de connection au Club Photo.\n
+		--Amélioration :\n
+		---Mise en cache des appels vers le club photo.\n
+		---Annulation possible du rafraichissement du club photo.\n
+		---Annulation possible de l'action de visualisation d'un dossier du club photo.\n
+		---Mise en place de progress poppup dans le club photo.\n
+		\n
+		-4.Kaynasou.1 :\n
+		--Bug corrigés :\n
+		---Correction de la connexion à Caligula.\n
+		--Nouveautés :\n
+		---L'utilisateur peut choisir de cacher les semaines déjà écoulées de Caligula via les propriétés.\n
+		---Mise en place du club photo.\n
+		\n
+		-4.Julia.1 :\n
+		--Bug corrigés :\n
+		---Faute d'orthographe dans les crédits.\n
+		--Nouveautés :\n
+		---Icone d'utilisateur quand un lien dans les ragots se trouve être le profil d'un membre de la webteam.\n
+		---La page de profil s'ouvre au lieu de l'explorateur internet lors d'un clic sur un lien de profil de membre webteam dans les ragots.\n
+		\n
+		-4.Irène.4 :\n
+		--Bug corrigés :\n
+		---Chargement des boites de message et d'email fonctionne sur les Sony Ericsson.\n
+		---Accent corrigé pour les emails.\n
+		\n
+		-4.Irène.3 :\n
+		--Bug corrigés :\n
+		---Lors de la lecture d'un email, quand on retourne sur la page des emails, il est bien marqué comme 'lu'.\n
+		--Retouche de code :\n
+		---Sur les XPeria, toujours ces problèmes de chargement qui font crasher l'appli. J'ai viré les Logs (ça perso j'aurai du le faire depuis bien longtemps) et j'ai supprimer des BufferString inutiles pour éviter de consommer de la mémoire.\n
+		\n
+		-4.Irène.2 :\n
+		--Bug corrigés :\n
+		---Demande de mise à jour de l'application corrigé.\n
+		\n
+		-4.Irène.1 :\n
+		--Bug corrigés :\n
+		---Plantage de l'application sur certain téléphone dont les Xperia et Samsung Galaxy S 2 lors d'une connexion.\n
+		---Titre dans le panneau des boites de message.\n
+		--Nouveautés :\n
+		---Envoi d'email possible mais des sauts de lignes sont à corriger.\n
+		---Visualisation de l'état de chargement des messages à même la boite (italique : message non-chargé).\n
+		\n
+		-4.Hamruhd.2 :\n
+		--Bug corrigés :\n
+		---Si vous n'avez pas de photos de profils d'enregistrées, l'application ne plante pas.\n
+		---La suppression des photos de profils est fonctionnelle.\n
+		\n
+		-4.Hamruhd.1 :\n
+		--Bug corrigés :\n
+		---Enregistrement des images de profils (Android 4.0).\n
+		---Nombreux plantage suite au non-recyclage des Bitmap (Android 4.0).\n
+		---Suppression des emails fonctionnels.\n
+		---Problèmes d'encodage corrigé sur l'ensemble de l'application (message privé / email / Caligula).\n
+		--Nouveautés :\n
+		---Nouvelle interface pour le panneau principal.\n
+		---Application utilisable par les professeurs (faut bien faire plaisir à tout le monde ^^)\n
+		---Gestion de toutes les boites de messagerie pour les emails.\n
+		\n
+		-3.Gwenaëlle.3 :\n
+		--Bug corrigés :\n
+		---L'application ne ferme plus si l'on clique sur le menu des profils sur la page de log s'il n'y a pas de profil en BDD.\n
+		---Les ragots refonctionnent en mode hors-connecté.\n
+		---ScrollBar ajoutée dans le vue des historiques des versions.\n
+		\n
+		-3.Gwenaëlle.2 :\n
+		--Bug corrigé :\n
+		---Correction de la mise à jour automatique.\n
+		\n
+		-3.Gwenaëlle.1 :\n
+		--Bug corrigés :\n
+		---Plus d'exception dans les préférences en bas de page (Android 4.0.3).\n
+		---Plus de fermeture de l'application lors d'une demande de service lorsqu'on la réveille.\n
+		--Nouveauté :\n
+		---Page d'historique des versions.\n
+		\n
+		-3.Fanny.3 :\n
+		--Bug corrigé :\n
+		---Erreur grave non-détectée après publication de l'application.\n
+		\n
+		-3.Fanny.2 :\n
+		--Bug corrigé :\n
+		---Erreur grave non-détectée après publication de l'application.\n
+		\n
+		-3.Fanny.1 :\n
+		--Nouveautés :\n
+		---Icone Youtube dans les Ragots si le lien est un lien Youtube.\n
+		---Icone Dailymotion dans les Ragots si le lien est un lien Dailymotion.\n
+		" />
+    </ScrollView>
+</LinearLayout>

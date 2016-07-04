@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+
+xmlns:android="http://schemas.android.com/apk/res/android">
+
+<PreferenceCategory android:title="Page de login Webteam">
+	<CheckBoxPreference
+		android:key="sesouvenirwebteam"
+		android:title="Se souvenir du login"
+		android:defaultValue="true"
+		android:summary="Coche la case 'Se souvenir'.">
+	</CheckBoxPreference>
+</PreferenceCategory>
+<PreferenceCategory android:title="Page de login Squirrel">
+	<CheckBoxPreference
+		android:key="sesouvenirsquirrel"
+		android:title="Se souvenir du login"
+		android:defaultValue="true"
+		android:summary="Coche la case 'Se souvenir'.">
+	</CheckBoxPreference>
+	<!-- <CheckBoxPreference
+		android:key="manuel"
+		android:title="Mode manuel"
+		android:summary="Si on coche, le page de log se forcera en mode manuel.">
+	</CheckBoxPreference>-->
+</PreferenceCategory>
+<PreferenceCategory android:title="Page du trombi">
+	<CheckBoxPreference
+		android:key="trombinom"
+		android:title="Choisir le nom"
+		android:defaultValue="true"
+		android:summary="Le champ 'Nom' apparaîtra.">
+	</CheckBoxPreference>
+	<CheckBoxPreference
+		android:key="trombiprenom"
+		android:title="Choisir le prenom"
+		android:defaultValue="true"
+		android:summary="Le champ 'prenom' apparaîtra.">
+	</CheckBoxPreference>
+	<CheckBoxPreference
+		android:key="trombipseudo"
+		android:title="Choisir le pseudo"
+		android:defaultValue="false"
+		android:summary="Le champ 'Pseudo' apparaîtra.">
+	</CheckBoxPreference>
+	<CheckBoxPreference
+		android:key="trombiemail"
+		android:title="Choisir l'email"
+		android:defaultValue="false"
+		android:summary="Le champ 'Email' apparaîtra.">
+	</CheckBoxPreference>
+	<CheckBoxPreference
+		android:key="trombitelephone"
+		android:title="Choisir le téléphone"
+		android:defaultValue="false"
+		android:summary="Le champ 'Téléphone' apparaîtra.">
+	</CheckBoxPreference>
+	<CheckBoxPreference
+		android:key="trombiclasse"
+		android:title="Choisir la classe"
+		android:defaultValue="true"
+		android:summary="Le champ 'Classe' apparaîtra.">
+	</CheckBoxPreference>
+	<CheckBoxPreference
+		android:key="trombisexe"
+		android:title="Choisir le sexe"
+		android:defaultValue="true"
+		android:summary="Le champ 'Sexe' apparaîtra.">
+	</CheckBoxPreference>
+</PreferenceCategory>
+<PreferenceCategory android:title="Caligula">
+	<Preference
+		android:key="firstMonday"
+		android:title="Lundi de la semaine 1"
+		android:summary="1/1/2000" />
+	<ListPreference
+		android:title="Classe"
+		android:summary="Non définie"
+		android:key="listPref"
+		android:defaultValue="0" />
+		<!-- android:entries="@array/classe_caligula" /> -->
+		<!-- android:entryValues="@array/classe_value" /> -->
+	<CheckBoxPreference
+		android:key="caligula_old_week"
+		android:title="Afficher les anciennes semaines"
+		android:defaultValue="false"
+		android:summary="Les anciennes semaines apparaîtrons.">
+	</CheckBoxPreference>
+	<CheckBoxPreference
+		android:key="caligula_heure"
+		android:title="Afficher l'heure"
+		android:defaultValue="true"
+		android:summary="L'heure du cours apparaîtra.">
+	</CheckBoxPreference>
+	<!-- <CheckBoxPreference
+		android:key="caligula_date"
+		android:title="Afficher la date"
+		android:defaultValue="true"
+		android:summary="La date du cours apparaîtra.">
+	</CheckBoxPreference>-->
+	<CheckBoxPreference
+		android:key="caligula_duree"
+		android:title="Afficher la durée"
+		android:defaultValue="true"
+		android:summary="La durée du cours apparaîtra.">
+	</CheckBoxPreference>
+	<CheckBoxPreference
+		android:key="caligula_matiere"
+		android:title="Afficher la matière"
+		android:defaultValue="true"
+		android:summary="La matière du cours apparaîtra.">
+	</CheckBoxPreference>
+	<CheckBoxPreference
+		android:key="caligula_salle"
+		android:title="Afficher la salle"
+		android:defaultValue="true"
+		android:summary="La salle du cours apparaîtra.">
+	</CheckBoxPreference>
+	<CheckBoxPreference
+		android:key="caligula_prof"
+		android:title="Afficher le professeur"
+		android:defaultValue="true"
+		android:summary="Le professeur du cours apparaîtra.">
+	</CheckBoxPreference>
+</PreferenceCategory>
+<PreferenceCategory android:title="Photo de profil">
+	<CheckBoxPreference
+		android:key="photo_profil_saved"
+		android:title="Sauvegarder"
+		android:defaultValue="true"
+		android:summary="Les photos seront sauvegardées dans le téléphone.">
+	</CheckBoxPreference>
+	<ListPreference
+		android:title="Qualité"
+		android:key="listPrefQuality"
+		android:entryValues="@array/photo_value"
+		android:entries="@array/photo_name"
+		android:defaultValue="0">
+	    </ListPreference>
+	</PreferenceCategory>
+	
+
+</PreferenceScreen>

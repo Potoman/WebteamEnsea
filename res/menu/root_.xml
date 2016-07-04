@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/itemPreferences"
+        android:icon="@drawable/ic_menu_preferences"
+        android:title="Préférences">
+    </item>
+    <item
+        android:id="@+id/itemProfil"
+        android:icon="@drawable/ic_menu_blocked_user"
+        android:title="Déconnexion">
+    </item>
+    <item
+        android:id="@+id/itemCredit"
+        android:icon="@drawable/ic_menu_preferences"
+        android:title="Crédit">
+    </item>
+    <item
+        android:id="@+id/itemHistorique"
+        android:icon="@drawable/ic_menu_preferences"
+        android:title="Historique">
+    </item>
+
+</menu>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Webteam Preferences" />
+    <CheckBoxPreference android:title="Sync Caligula"
+                        android:key="sync_caligula"
+                        android:summary="Votre emploi du temps sera mis à jour."/>
+    <CheckBoxPreference android:title="Sync Contact"
+                        android:key="sync_contact"
+                        android:summary="Le repertoire de l'ensea sera accessible."/>
+</PreferenceScreen>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:id="@+id/ll_which_boite">
+	<!--android:background="#ffe52c90"-->
+	<TextView
+	    android:id="@+id/tv_nom_boite"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:textSize="35px"
+		android:textColor="#ffffffff"/>
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:textSize="15px"
+		android:textColor="#ffffffff"
+		android:text=""
+		android:id="@+id/tv_nombre_message_in_boite"/>
+</LinearLayout>

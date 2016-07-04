@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.example.webteam"
+    android:versionCode="1"
+    android:versionName="4.Kaynasou.2" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+
+    <application
+        android:icon="@drawable/logo_appli"
+        android:label="@string/app_name" >
+        <provider
+	        android:name="org.example.webteam.sync.contact.ContactProvider"
+	        android:authorities="org.example.webteam.sync.contact"
+	        android:syncable="true"/>
+        <service
+            android:name="org.example.webteam.sync.contact.ContactSyncService"
+            android:exported="true"
+            android:process=":sync">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_contact_adapter" />
+            <meta-data
+                android:name="android.provider.CONTACTS_STRUCTURE"
+                android:resource="@xml/sync_contact_structure" />
+        </service>
+        <service android:name="org.example.webteam.sync.AuthenticatationService"
+            android:label="WebTeam">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" >
+                </action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" >
+            </meta-data>
+        </service>
+
+        <activity
+            android:name=".loggin.Root"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".accueil.PageLog"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="Preferences"
+            android:screenOrientation="portrait" />
+        <activity android:name=".loggin.deleteprofil.SupprimerProfil" />
+        <activity android:name=".ragot.Ragots" />
+        <activity android:name=".trombinoscope.Trombinoscope" />
+        <activity android:name=".eleve.FicheEleve">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.com.oreilly.demo.pa.ch17.sync.profile" />
+            </intent-filter>
+<!--             <intent-filter> -->
+<!--                 <action android:name="com.android.contacts.action.QUICK_CONTACT" /> -->
+<!--                 <category android:name="android.intent.category.DEFAULT" /> -->
+<!--                 <data android:mimeType="vnd.android.cursor.item/vnd.com.oreilly.demo.pa.ch17.sync.profile" /> -->
+<!--             </intent-filter> -->
+            
+        </activity>
+        <activity android:name=".trombinoscope.TrombiResult" />
+        <activity android:name=".anniversaire.Anniversaire" />
+        <activity android:name=".favoris.TabFavoris" />
+        <activity android:name=".favoris.FavorisRagot" />
+        <activity android:name=".favoris.FavorisLien" />
+        <activity android:name=".favoris.FavorisEleve" />
+        <activity android:name=".eleve.SendSMS" />
+        <activity android:name=".eleve.SupprimerPhotoProfil" />
+        <activity
+            android:name=".caligula.Caligula"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".boitemanager.boite.messageprive.BoiteDeMessagePrive"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".boitemanager.boite.messageprive.BoiteDeMessagePriveLecture"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".boitemanager.boite.messageprive.BoiteDeMessagePriveEcriture"
+            android:screenOrientation="portrait" />
+        <activity android:name=".credit.Credit" />
+        <activity android:name=".historique.Historique" />
+        <activity
+            android:name=".boitemanager.boite.email.BoiteDeMessageEmail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".boitemanager.boite.email.BoiteDeMessageEmailLecture"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".boitemanager.boite.email.BoiteDeMessageEmailEcriture"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".clubphoto.ActClubPhoto"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".clubphoto.activity.ImageGridActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".clubphoto.activity.ImagePagerActivity" />
+        <activity android:name=".sync.AuthenticatorActivity" />
+    </application>
+
+</manifest>

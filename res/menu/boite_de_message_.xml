@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:title="Synchroniser" android:id="@+id/item_synchroniser" android:icon="@drawable/ic_menu_refresh"></item>
+  <item android:title="Ecrire un message" android:id="@+id/item_ecrire_message_personnel" android:icon="@drawable/ic_menu_compose"></item>
+</menu>

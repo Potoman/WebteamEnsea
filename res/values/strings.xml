@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, Root!</string>
+    <string name="app_name">WebTeam</string>
+    <string name="classe_prompt">Choisis la classe</string>
+    <string-array name="classes_array">
+    	<item>Tout</item>
+        <item>1er année A</item>
+        <item>1er année B</item>
+        <item>1er année A et B</item>
+        <item>2A</item>
+        <item>3A</item>
+        <item>3A AEI</item>
+        <item>3A ECM</item>
+        <item>3A EIB</item>
+        <item>3A ESE</item>
+        <item>3A IS</item>
+        <item>3A MSC</item>
+        <item>3A RT</item>
+        <item>3A STC</item>
+        <item>3A étranger</item>
+        <item>ITI</item>
+        <item>Diplômé</item>
+        <item>Exclu/Démissionaire</item>
+        <item>N+I</item>
+    </string-array>
+    <string name="sexe_prompt">Choisis le sexe</string>
+    <string-array name="sexe_array">
+    	<item>Tout</item>
+        <item>Phallus</item>
+        <item>Vagin</item>
+    </string-array>
+    
+    
+    
+    <string-array name="photo_name">
+		<item>100%</item>
+		<item>90%</item>
+		<item>80%</item>
+		<item>70%</item>
+		<item>60%</item>
+		<item>50%</item>
+		<item>40%</item>
+		<item>30%</item>
+		<item>20%</item>
+		<item>10%</item>
+    </string-array>
+    
+    <string-array name="photo_value">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6</item>
+		<item>7</item>
+		<item>8</item>
+		<item>9</item>
+    </string-array>
+    
+    <string-array name="waitingConnexion">
+    	<item>Connexion...</item>
+    	<item>Veuillez patienter, la connexion avec les serveurs de la webteam est en cours.\nPour revenir en arrière, pressez "Back". Et si tu sais pas ce qu\'est le bouton "Back" sur ton androphone, c\'est que t\'es un connard !</item>
+    </string-array>
+    <string-array name="waitingRagot">
+    	<item>Chargement des ragots</item>
+    </string-array>
+    <string-array name="waitingAddRagot">
+    	<item>Ajout d\'un ragot...</item>
+    </string-array>
+    <string-array name="waitingLoadRagotIfBddEmpty">
+    	<item>Chargement des ragots...</item>
+    </string-array>
+    <string-array name="waitingFicheEleve">
+    	<item>Chargement des informations...</item>
+    </string-array>
+    <string-array name="waitingTrombinoscope">
+    	<item>Recherche de profil...</item>
+    </string-array>
+    <string-array name="waitingForSendingSMS">
+    	<item>Envoi d\'un SMS...</item>
+    </string-array>
+    <string-array name="waitingAnniversaire">
+    	<item>Chargement des anniversaires...</item>
+    </string-array>
+    <string-array name="waitingForCaligula">
+    	<item>Chargement des emplois du temps...</item>
+    </string-array>
+    <string-array name="waitingLoadUrlForCaligula">
+    	<item>Initialisation de Caligula... 1 à 2 minutes</item>
+    </string-array>
+    <string-array name="waitingMessagePrive">
+    	<item>Synchronisation des messages privés...</item>
+    </string-array>
+    <string-array name="waitingMessageEmail">
+    	<item>Synchronisation des emails...</item>
+    </string-array>
+    <string-array name="waitingLectureMessagePrive">
+    	<item>Chargement du message privé...</item>
+    </string-array>
+    <string-array name="waitingLectureMessageEmail">
+    	<item>Chargement de l\'email...</item>
+    </string-array>
+    <string-array name="waitingSupprimerMessagePrive">
+    	<item>Suppression du message privé...</item>
+    </string-array>
+    <string-array name="waitingLectureMessageEmailSupprimer">
+    	<item>Suppression de l\'email...</item>
+    </string-array>
+    <string-array name="waitingEcrireMessagePrive">
+    	<item>Envois d\'un message privé...</item>
+    </string-array>
+    <string-array name="waitingConnexionSquirrel">
+    	<item>Connexion à votre WebMail en cours...</item>
+    </string-array>
+    <string-array name="waitingConnexionClubPhoto">
+    	<item>Connexion au Club Photo en cours...</item>
+    </string-array>
+    <string-array name="exception">
+    	<item>Vous n\'êtes pas connecté à internet !</item>
+    	<item>La webteam ne répond pas... :S</item>
+    </string-array>
+    <string name="waiting_load_all_category_club_photo">Chargement des catégories...</string>
+    <string name="waiting_load_url_from_category_club_photo">Chargement des url des images...</string>
+    
+    <!-- Menu club photo -->
+    <string name="menu_item_clear_memory_cache">Clear memory cache</string>
+    <string name="menu_item_clear_disc_cache">Clear disc cache</string>
+    <string name="menu_item_pause_on_scroll">Pause on scroll</string>
+    <string name="menu_item_pause_on_fling">Pause on fling</string>
+    
+    <string name="descr_image">Image</string>
+</resources>

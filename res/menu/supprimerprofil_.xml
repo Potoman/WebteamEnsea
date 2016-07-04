@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:title="Supprimer la sélection" android:id="@+id/supprimer" android:icon="@drawable/ic_menu_blocked_user"></item>
+
+</menu>

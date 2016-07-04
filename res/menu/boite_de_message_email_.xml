@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:title="Synchroniser tous les emails" android:id="@+id/item_synchroniser" android:icon="@drawable/ic_menu_refresh"></item>
+  <item android:title="Récupérer les derniers emails" android:id="@+id/item_get_last_email" android:icon="@drawable/ic_menu_flash"></item>
+  <item android:title="Ecrire un message" android:id="@+id/item_ecrire_message_email" android:icon="@drawable/ic_menu_compose"></item>
+</menu>

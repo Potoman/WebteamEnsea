@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/vg">
+
+	<TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35px"
+        android:gravity="center"
+        android:text="Webteam"
+        android:id="@+id/tv_titre_panneau" />
+	    <TextView
+	        android:id="@+id/tv_pseudo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginRight="20dp"
+	        android:text="Pseudo" />
+	    <EditText android:id="@+id/et_pseudo"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginRight="20dp"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:nextFocusUp="@+id/et_pseudo" android:nextFocusLeft="@+id/et_pseudo" />
+
+	    <TextView
+	        android:id="@+id/tv_password"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginRight="20dp"
+	        android:text="Password" />
+        <EditText
+	        android:id="@+id/et_password"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginRight="20dp"
+	        android:layout_width="fill_parent"
+	        android:password="true"
+	        android:layout_height="wrap_content"></EditText>
+	   <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content">
+    		<TextView android:id="@+id/tv_se_souvenir"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="20dp"
+		        android:layout_marginRight="20dp"
+		        android:text="Se souvenir"
+				android:layout_gravity="right" />
+		    <CheckBox android:id="@+id/cb_se_souvenir"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignRight="@id/tv_se_souvenir"
+			    android:checked="true"/>
+    	</RelativeLayout>
+	    <Button
+	        android:id="@+id/ok"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginRight="20dp"
+	        android:text="Connexion" />
+
+	    <TextView
+	        android:id="@+id/tv_version_application"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_gravity="bottom"
+	        android:gravity="center_horizontal|bottom"
+	        android:text="Created by Potoman | Powered by Eclipse | 4.Hamruhd.1"
+	        android:textSize="10dp"
+	        android:paddingBottom="5dp" />
+
+</LinearLayout>

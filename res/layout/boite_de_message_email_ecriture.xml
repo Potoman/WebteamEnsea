@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+	<TextView
+		android:text="Email du destinataire :"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/et_message_email_ecrire_email"  
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" />
+	<TextView
+		android:text="Titre de l'email :"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/et_message_email_ecrire_titre"  
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine" />
+  	<TextView
+		android:text="Email :"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+    <EditText 
+        android:id="@+id/et_message_email_ecrire_texte"  
+        android:layout_width="fill_parent" 
+        android:layout_height="150px"
+        android:gravity="top" />          
+    <Button 
+        android:id="@+id/b_message_email_ecrire_send"  
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:text="Envoyer le message privé" />
+</LinearLayout>
+

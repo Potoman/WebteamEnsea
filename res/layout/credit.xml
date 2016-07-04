@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+    <TextView 
+    android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="
+		Code de l'application : Maxime Girard, alias Potoman\n\n
+		Service Web : Romain Perez\n\n
+		Merci à Monsieur Jean-Paul Bachmann pour son soutient à la partie Squirrel :)\n\n
+		Bêta testeurs :\n
+		- Arnaud Maffer (SGS 2, Android 4.0.3)\n
+		- Fabien Plancke (Xperia X10, Android 2.3.3)\n
+		- Romain Pérez (Nexus S, Android 4.1.2)\n
+		- Marie Remignon (Xperia Arc S, Android 2.3)"/>
+</LinearLayout>

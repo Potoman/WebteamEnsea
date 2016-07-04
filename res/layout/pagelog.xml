@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/main_layout_page_log">
+    
+    <ViewFlipper android:id="@+id/details"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">  
+    
+    
+	    <LinearLayout
+	   	    android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:orientation="vertical"
+			android:id="@+id/ll_page_log_left"
+        	android:tag="Page 1/2">
+			<LinearLayout
+			    android:orientation="horizontal"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:paddingTop="25dip"
+			    android:layout_weight="1">
+			    <LinearLayout
+			        android:orientation="horizontal"
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:gravity="center"
+			        android:layout_weight="1">
+				    <Button
+				        android:id="@+id/news"
+				        android:background="@drawable/button_news"
+				        android:layout_width="50dip"
+				        android:layout_height="50dip"/>
+			    </LinearLayout>
+			    <LinearLayout
+				    android:orientation="horizontal"
+				    android:layout_width="fill_parent"
+				    android:layout_height="fill_parent"
+				    android:gravity="center"
+				    android:layout_weight="1">
+					<Button
+				        android:id="@+id/anniversaire"
+				        android:background="@drawable/button_anniversaire"
+				        android:layout_width="50dip"
+				        android:layout_height="50dip"/>
+			  	</LinearLayout>
+		    </LinearLayout>
+			<LinearLayout
+		        android:orientation="horizontal"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1">
+		 		<TextView
+			    	android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="20dip"
+			        android:gravity="center"
+			        android:text="News"
+			        android:textColor="#333333"
+		            android:layout_weight="1"/>
+		 		<TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="20dip"
+			        android:gravity="center"
+			        android:text="Anniv"
+			        android:textColor="#333333"
+		            android:layout_weight="1"/>
+		  	</LinearLayout>
+		  	
+		  	
+		  	
+		  	
+		  	<LinearLayout
+			    android:orientation="horizontal"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:paddingTop="15dip"
+			    android:layout_weight="1">
+			    <LinearLayout
+			        android:orientation="horizontal"
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:gravity="center"
+			        android:layout_weight="1">
+				    <Button
+				        android:id="@+id/ragots"
+				        android:background="@drawable/button_ragots"
+				        android:layout_width="50dip"
+				        android:layout_height="50dip"/>
+			    </LinearLayout>
+			    <LinearLayout
+				    android:orientation="horizontal"
+				    android:layout_width="fill_parent"
+				    android:layout_height="fill_parent"
+				    android:gravity="center"
+				    android:layout_weight="1">
+					<Button
+				        android:id="@+id/forum"
+				        android:background="@drawable/button_forum"
+				        android:layout_width="50dip"
+				        android:layout_height="50dip"/>
+			  	</LinearLayout>
+		    </LinearLayout>
+			<LinearLayout
+		        android:orientation="horizontal"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1">
+		 		<TextView
+			    	android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="20dip"
+			        android:gravity="center"
+			        android:text="Ragots"
+			        android:textColor="#333333"
+		            android:layout_weight="1"/>
+		 		<TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="20dip"
+			        android:gravity="center"
+			        android:text="Forum"
+			        android:textColor="#333333"
+		            android:layout_weight="1"/>
+		  	</LinearLayout>
+		  	<LinearLayout
+			    android:orientation="horizontal"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:paddingTop="15dip"
+			    android:layout_weight="1">
+			    <LinearLayout
+			        android:orientation="horizontal"
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:gravity="center"
+			        android:layout_weight="1">
+				    <Button
+				        android:id="@+id/trombi"
+				        android:background="@drawable/button_trombi"
+				        android:layout_width="50dip"
+				        android:layout_height="50dip"/>
+			    </LinearLayout>
+			    <LinearLayout
+				    android:orientation="horizontal"
+				    android:layout_width="fill_parent"
+				    android:layout_height="fill_parent"
+				    android:gravity="center"
+				    android:layout_weight="1">
+					<Button
+				        android:id="@+id/message"
+				        android:background="@drawable/button_message"
+				        android:layout_width="50dip"
+				        android:layout_height="50dip"/>
+			  	</LinearLayout>
+		    </LinearLayout>
+			<LinearLayout
+		        android:orientation="horizontal"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1">
+		 		<TextView
+			    	android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="20dip"
+			        android:gravity="center"
+			        android:text="Trombi"
+			        android:textColor="#333333"
+		            android:layout_weight="1"/>
+		 		<TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="20dip"
+			        android:gravity="center"
+			        android:text="Message"
+			        android:textColor="#333333"
+		            android:layout_weight="1"/>
+		  	</LinearLayout>
+	 	</LinearLayout>
+		 	
+		 	
+		 	
+		 	
+		 	
+	 	<LinearLayout
+	   	    android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:orientation="vertical"
+			android:id="@+id/ll_page_log_right"
+        	android:tag="Page 2/2">
+			<LinearLayout
+			    android:orientation="horizontal"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:paddingTop="25dip"
+			    android:layout_weight="1">
+			    <LinearLayout
+			        android:orientation="horizontal"
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:gravity="center"
+			        android:layout_weight="1">
+				    <Button
+				        android:id="@+id/favoris"
+				        android:background="@drawable/button_favoris"
+				        android:layout_width="50dip"
+				        android:layout_height="50dip"/>
+			    </LinearLayout>
+		    </LinearLayout>
+			<LinearLayout
+		        android:orientation="horizontal"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1">
+		 		<TextView
+			    	android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="20dip"
+			        android:gravity="center"
+			        android:text="Favoris"
+			        android:textColor="#333333"
+		            android:layout_weight="1"/>
+		  	</LinearLayout>
+	 	</LinearLayout>
+		 	
+	 </ViewFlipper>
+	 	
+	 	
+	 	
+	 	
+</LinearLayout>

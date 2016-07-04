@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:title="Préférences" android:id="@+id/menu_caligula_preferences" android:icon="@drawable/ic_menu_preferences"></item>
+	<!-- <item android:title="Définir la date du lundi de la semaine numéro 1" android:id="@+id/menu_caligula_change_date" android:icon="@drawable/ic_menu_today"></item> -->
+	<item android:title="Actualiser" android:id="@+id/menu_caligula_refresh" android:icon="@drawable/ic_menu_refresh"></item>
+</menu>

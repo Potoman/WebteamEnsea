@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:title="Ajouter aux favoris" android:id="@+id/item_favoris" android:icon="@drawable/ic_menu_star"></item>
+  <item android:title="Supprimer des favoris" android:id="@+id/item_favoris_supprimer" android:icon="@drawable/ic_menu_delete"></item>
+  <item android:title="Actualiser la photo" android:id="@+id/item_favoris_actualiser" android:icon="@drawable/ic_menu_refresh"></item>
+</menu>

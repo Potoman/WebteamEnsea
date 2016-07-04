@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_rl_viewflip_webteam"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/root_tv_titre_webteam"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5px"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Webteam"
+        android:textSize="35px" />
+
+    <TextView
+        android:id="@+id/root_tv_password_webteam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="170px"
+        android:text="Password :" />
+
+    <Button
+        android:id="@+id/root_b_connexion_webteam"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="340px"
+        android:text="Connexion" />
+
+    <EditText
+        android:id="@+id/root_et_password_webteam"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="200px"
+        android:ems="10"
+        android:inputType="textPassword" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/root_tv_se_souvenir_webteam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="280px"
+        android:text="Se souvenir" />
+
+    <TextView
+        android:id="@+id/root_tv_pseudo_webteam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="60px"
+        android:text="Pseudo :" />
+
+    <EditText
+        android:id="@+id/root_et_pseudo_webteam"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="90px"
+        android:ems="10" />
+
+    <CheckBox
+        android:id="@+id/root_cb_se_souvenir_webteam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="280px" />
+    
+    <TextView
+        android:id="@+id/root_tv_description_webteam"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10px"
+        android:gravity="center_horizontal"
+        android:text="Created by Potoman | Powered by Eclipse | 4.Hamruhd.1"
+        android:textSize="10dp" />
+
+
+    <Button
+        android:id="@+id/root_b_connexion_caligula"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="60px"
+        android:text="Connexion" />
+    
+    <Button
+        android:id="@+id/root_b_connexion_squirrel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="590px"
+        android:text="Connexion" />
+
+    <Button
+        android:id="@+id/root_b_connexion_club_photo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="340px"
+        android:text="Connexion" />
+
+<!--     <Button -->
+<!--         android:id="@+id/root_b_pass_connexion_club_photo" -->
+<!--         android:layout_width="fill_parent" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:layout_marginLeft="20px" -->
+<!--         android:layout_marginRight="20px" -->
+<!--         android:layout_marginTop="420px" -->
+<!--         android:text="Pas de login" /> -->
+
+</RelativeLayout>

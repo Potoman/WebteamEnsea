@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+	 <LinearLayout 
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/stat_sys_download_anim0"
+			android:layout_marginTop="5dp"
+			android:layout_marginBottom="5dp"
+			android:layout_marginLeft="5dp"/>
+		<TextView
+			android:id="@+id/tv_notification_mise_a_jour"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textStyle="bold"
+			android:layout_margin="5dp"
+			android:textColor="#ff000000"
+			android:textSize="18dip" />
+	</LinearLayout>
+	<LinearLayout 
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		<ProgressBar
+			android:id="@+id/pb_notification_mise_a_jour"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			style="@android:style/Widget.ProgressBar.Horizontal"
+			android:layout_marginBottom="5dp"
+			android:layout_marginRight="5dp"
+			android:layout_marginLeft="5dp" />
+		<TextView
+			android:id="@+id/tv_notification_mise_a_jour_pourcentage"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_marginRight="5dp"
+			android:layout_marginBottom="5dp"
+			android:textColor="#ff000000"
+			android:text="Connexion..."/>
+	</LinearLayout>
+		<!-- -->
+</LinearLayout>
