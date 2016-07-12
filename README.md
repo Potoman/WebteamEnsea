@@ -10,6 +10,7 @@ So be kind if you find magic number and lot of other thing bad. :)
 
 Maybe to put this code on Github give me some bravery to continue it !
 
+
 Enjoy :)
 
 ++
