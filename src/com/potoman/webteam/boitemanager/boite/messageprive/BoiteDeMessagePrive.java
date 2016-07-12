@@ -1,22 +1,23 @@
-package org.example.webteam.boitemanager.boite.messageprive;
+package com.potoman.webteam.boitemanager.boite.messageprive;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.Map.Entry;
 
-import org.example.task.ATGetBoiteDeMessagePrive;
-import org.example.task.ATGetBoiteSquirrel;
 import org.example.webteam.R;
 import org.example.webteam.R.anim;
 import org.example.webteam.R.array;
 import org.example.webteam.R.id;
 import org.example.webteam.R.menu;
-import org.example.webteam.boitemanager.boite.BoiteDeMessage;
-import org.example.webteam.boitemanager.message.Message;
 
-import potoman.tools.L;
-import potoman.webteam.bdd.BddMessagePriveManager;
+import com.potoman.tools.L;
+import com.potoman.webteam.bdd.BddMessagePriveManager;
+import com.potoman.webteam.boitemanager.boite.BoiteDeMessage;
+import com.potoman.webteam.boitemanager.message.Message;
+import com.potoman.webteam.task.ATGetBoiteDeMessagePrive;
+import com.potoman.webteam.task.ATGetBoiteSquirrel;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;

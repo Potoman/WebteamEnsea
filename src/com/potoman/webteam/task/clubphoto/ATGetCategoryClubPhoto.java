@@ -1,4 +1,4 @@
-package org.example.task.clubphoto;
+package com.potoman.webteam.task.clubphoto;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,10 +7,11 @@ import org.apache.http.client.HttpClient;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import potoman.tools.CallService;
-import potoman.tools.IObserver;
-import potoman.webteam.bdd.data.FolderClubPhoto;
-import potoman.webteam.bdd.data.UrlImgClubPhoto;
+import com.potoman.tools.CallService;
+import com.potoman.tools.IObserver;
+import com.potoman.webteam.bdd.data.FolderClubPhoto;
+import com.potoman.webteam.bdd.data.UrlImgClubPhoto;
+
 import android.content.Context;
 import android.os.AsyncTask;
 

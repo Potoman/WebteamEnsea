@@ -1,11 +1,11 @@
-package org.example.task;
+package com.potoman.webteam.task;
 
 import java.util.Set;
 
 import org.apache.http.client.HttpClient;
 
-import potoman.tools.IObserver;
-import potoman.webteam.bdd.data.FolderClubPhoto;
+import com.potoman.tools.IObserver;
+import com.potoman.webteam.bdd.data.FolderClubPhoto;
 
 import android.content.Context;
 import android.os.AsyncTask;

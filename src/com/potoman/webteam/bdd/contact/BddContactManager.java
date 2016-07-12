@@ -1,13 +1,13 @@
-package potoman.webteam.bdd.contact;
+package com.potoman.webteam.bdd.contact;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.example.webteam.eleve.ContactWebteam;
-import org.example.webteam.loggin.Root;
+import com.potoman.tools.L;
+import com.potoman.webteam.constant.Webteam;
+import com.potoman.webteam.eleve.ContactWebteam;
+import com.potoman.webteam.loggin.Root;
 
-import potoman.tools.L;
-import potoman.webteam.constant.Webteam;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;

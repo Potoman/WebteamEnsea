@@ -1,4 +1,4 @@
-package org.example.webteam.loggin;
+package com.potoman.webteam.loggin;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,25 +6,26 @@ import java.util.concurrent.ExecutionException;
 
 import org.apache.http.client.HttpClient;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.example.task.ATConnexionSquirrel;
-import org.example.task.ATConnexionWebteam;
-import org.example.task.ATConnexionWebteam.RetourConnexion;
-import org.example.task.IWorkFinishOfAsyncTask;
-import org.example.task.clubphoto.ATConnexionClubPhoto;
-import org.example.webteam.Preferences;
 import org.example.webteam.R;
-import org.example.webteam.TempData;
-import org.example.webteam.accueil.PageLog;
-import org.example.webteam.boitemanager.boite.email.BoiteDeMessageEmail;
-import org.example.webteam.caligula.Caligula;
-import org.example.webteam.clubphoto.ActClubPhoto;
-import org.example.webteam.credit.Credit;
-import org.example.webteam.historique.Historique;
 
-import potoman.tools.CallService;
-import potoman.tools.IObserver;
-import potoman.tools.L;
-import potoman.webteam.constant.Webteam;
+import com.potoman.tools.CallService;
+import com.potoman.tools.IObserver;
+import com.potoman.tools.L;
+import com.potoman.webteam.Preferences;
+import com.potoman.webteam.TempData;
+import com.potoman.webteam.accueil.PageLog;
+import com.potoman.webteam.boitemanager.boite.email.BoiteDeMessageEmail;
+import com.potoman.webteam.caligula.Caligula;
+import com.potoman.webteam.clubphoto.ActClubPhoto;
+import com.potoman.webteam.constant.Webteam;
+import com.potoman.webteam.credit.Credit;
+import com.potoman.webteam.historique.Historique;
+import com.potoman.webteam.task.ATConnexionSquirrel;
+import com.potoman.webteam.task.ATConnexionWebteam;
+import com.potoman.webteam.task.IWorkFinishOfAsyncTask;
+import com.potoman.webteam.task.ATConnexionWebteam.RetourConnexion;
+import com.potoman.webteam.task.clubphoto.ATConnexionClubPhoto;
+
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.ProgressDialog;

@@ -1,4 +1,4 @@
-package org.example.webteam.caligula;
+package com.potoman.webteam.caligula;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -34,23 +34,24 @@ import org.apache.http.protocol.ExecutionContext;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
-import org.example.webteam.Preferences;
 import org.example.webteam.R;
 import org.example.webteam.R.anim;
 import org.example.webteam.R.array;
 import org.example.webteam.R.id;
 import org.example.webteam.R.layout;
 import org.example.webteam.R.menu;
-import org.example.webteam.anniversaire.Anniversaire;
 
-import potoman.tools.CallService;
-import potoman.tools.L;
-import potoman.tools.ManipOnTime;
-import potoman.tools.UrlService;
-import potoman.webteam.bdd.BddCaligulaManager;
-import potoman.webteam.bdd.BddUrlCaligulaManager;
-import potoman.webteam.constant.Webteam;
-import potoman.webteam.exception.ExceptionCaligula;
+import com.potoman.tools.CallService;
+import com.potoman.tools.L;
+import com.potoman.tools.ManipOnTime;
+import com.potoman.tools.UrlService;
+import com.potoman.webteam.Preferences;
+import com.potoman.webteam.anniversaire.Anniversaire;
+import com.potoman.webteam.bdd.BddCaligulaManager;
+import com.potoman.webteam.bdd.BddUrlCaligulaManager;
+import com.potoman.webteam.constant.Webteam;
+import com.potoman.webteam.exception.ExceptionCaligula;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;

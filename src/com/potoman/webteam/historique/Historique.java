@@ -1,4 +1,4 @@
-package org.example.webteam.historique;
+package com.potoman.webteam.historique;
 
 import org.example.webteam.R;
 

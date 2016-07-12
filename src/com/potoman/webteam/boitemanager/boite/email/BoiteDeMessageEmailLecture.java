@@ -1,26 +1,27 @@
-package org.example.webteam.boitemanager.boite.email;
+package com.potoman.webteam.boitemanager.boite.email;
 
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.example.task.ATConnexionSquirrel;
-import org.example.task.ATGetEmail;
-import org.example.task.ATSupprimerEmail;
-import org.example.task.IWorkFinishOfAsyncTask;
 import org.example.webteam.R;
 import org.example.webteam.R.array;
 import org.example.webteam.R.drawable;
 import org.example.webteam.R.id;
 import org.example.webteam.R.layout;
-import org.example.webteam.boitemanager.boite.BoiteDeMessage;
-import org.example.webteam.boitemanager.boite.BoiteDeMessageLecture;
-import org.example.webteam.boitemanager.message.Message;
-import org.example.webteam.boitemanager.message.email.Email;
-import org.example.webteam.boitemanager.message.messageprive.MessagePrive;
 
-import potoman.tools.CallService;
-import potoman.tools.L;
-import potoman.tools.Ref;
-import potoman.webteam.bdd.BddSquirrelManager;
-import potoman.webteam.constant.Webteam;
+import com.potoman.tools.CallService;
+import com.potoman.tools.L;
+import com.potoman.tools.Ref;
+import com.potoman.webteam.bdd.BddSquirrelManager;
+import com.potoman.webteam.boitemanager.boite.BoiteDeMessage;
+import com.potoman.webteam.boitemanager.boite.BoiteDeMessageLecture;
+import com.potoman.webteam.boitemanager.message.Message;
+import com.potoman.webteam.boitemanager.message.email.Email;
+import com.potoman.webteam.boitemanager.message.messageprive.MessagePrive;
+import com.potoman.webteam.constant.Webteam;
+import com.potoman.webteam.task.ATConnexionSquirrel;
+import com.potoman.webteam.task.ATGetEmail;
+import com.potoman.webteam.task.ATSupprimerEmail;
+import com.potoman.webteam.task.IWorkFinishOfAsyncTask;
+
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;

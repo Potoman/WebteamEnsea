@@ -1,4 +1,4 @@
-package org.example.task.clubphoto;
+package com.potoman.webteam.task.clubphoto;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,10 +15,11 @@ import org.json.JSONObject;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
-import potoman.tools.CallService;
-import potoman.tools.IObserver;
-import potoman.tools.L;
-import potoman.webteam.bdd.data.FolderClubPhoto;
+import com.potoman.tools.CallService;
+import com.potoman.tools.IObserver;
+import com.potoman.tools.L;
+import com.potoman.webteam.bdd.data.FolderClubPhoto;
+
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Xml;

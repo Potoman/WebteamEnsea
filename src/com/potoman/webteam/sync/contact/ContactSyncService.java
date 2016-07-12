@@ -1,4 +1,4 @@
-package org.example.webteam.sync.contact;
+package com.potoman.webteam.sync.contact;
 
 import android.app.Service;
 import android.content.Intent;

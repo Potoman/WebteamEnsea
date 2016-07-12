@@ -1,4 +1,4 @@
-package org.example.task.clubphoto;
+package com.potoman.webteam.task.clubphoto;
 
 public abstract class AUrlClubPhoto {
 

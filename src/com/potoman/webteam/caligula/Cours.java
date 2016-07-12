@@ -1,8 +1,8 @@
-package org.example.webteam.caligula;
+package com.potoman.webteam.caligula;
 
 import java.util.Calendar;
 
-import potoman.tools.L;
+import com.potoman.tools.L;
 
 public class Cours {
 	private int id = 0;

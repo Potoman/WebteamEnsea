@@ -1,7 +1,8 @@
-package org.example.task;
+package com.potoman.webteam.task;
 
 
-import potoman.tools.IObserver;
+import com.potoman.tools.IObserver;
+
 import android.os.AsyncTask;
 
 public abstract class ATGeneric<Params, Progress, Result> extends AsyncTask<Params, Progress, Result> {

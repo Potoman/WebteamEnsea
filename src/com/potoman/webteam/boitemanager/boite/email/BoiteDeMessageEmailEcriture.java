@@ -1,26 +1,25 @@
-package org.example.webteam.boitemanager.boite.email;
-
-import potoman.tools.Ref;
+package com.potoman.webteam.boitemanager.boite.email;
 
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.example.task.ATConnexionSquirrel;
-import org.example.task.ATInitEmailForSend;
-import org.example.task.ATSendEmail;
-import org.example.task.ATSendMessagePrive;
-import org.example.task.IWorkFinishOfAsyncTask;
 import org.example.webteam.R;
 import org.example.webteam.R.id;
 import org.example.webteam.R.layout;
-import org.example.webteam.boitemanager.Squirrel;
-import org.example.webteam.boitemanager.boite.BoiteDeMessage;
 
-import potoman.tools.CallService;
-import potoman.tools.IObserver;
-import potoman.tools.L;
-import potoman.webteam.constant.Webteam;
+import com.potoman.tools.CallService;
+import com.potoman.tools.IObserver;
+import com.potoman.tools.L;
+import com.potoman.tools.Ref;
+import com.potoman.webteam.boitemanager.Squirrel;
+import com.potoman.webteam.boitemanager.boite.BoiteDeMessage;
+import com.potoman.webteam.constant.Webteam;
+import com.potoman.webteam.task.ATConnexionSquirrel;
+import com.potoman.webteam.task.ATInitEmailForSend;
+import com.potoman.webteam.task.ATSendEmail;
+import com.potoman.webteam.task.ATSendMessagePrive;
+import com.potoman.webteam.task.IWorkFinishOfAsyncTask;
 
 import android.app.Activity;
 import android.app.ProgressDialog;

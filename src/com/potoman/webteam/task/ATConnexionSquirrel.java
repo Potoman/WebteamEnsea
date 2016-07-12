@@ -1,4 +1,4 @@
-package org.example.task;
+package com.potoman.webteam.task;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -9,11 +9,11 @@ import java.util.Observer;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.example.webteam.boitemanager.Squirrel;
 
-import potoman.tools.CallService;
-import potoman.tools.IObserver;
-import potoman.tools.L;
+import com.potoman.tools.CallService;
+import com.potoman.tools.IObserver;
+import com.potoman.tools.L;
+import com.potoman.webteam.boitemanager.Squirrel;
 
 import android.content.Context;
 import android.database.Observable;

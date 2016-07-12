@@ -1,4 +1,4 @@
-package org.example.webteam.ragot;
+package com.potoman.webteam.ragot;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -10,9 +10,10 @@ import org.example.webteam.R.drawable;
 import org.example.webteam.R.id;
 import org.example.webteam.R.layout;
 
-import potoman.tools.L;
-import potoman.tools.ObjectToDay;
-import potoman.webteam.exception.ExceptionCaligula;
+import com.potoman.tools.L;
+import com.potoman.tools.ObjectToDay;
+import com.potoman.webteam.exception.ExceptionCaligula;
+
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;

@@ -1,29 +1,30 @@
-package org.example.webteam.boitemanager.boite.messageprive;
+package com.potoman.webteam.boitemanager.boite.messageprive;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import org.example.task.ATGetMessagePrive;
-import org.example.task.ATSupprimerMessagePrive;
-import org.example.task.IWorkFinishOfAsyncTask;
 import org.example.webteam.R;
 import org.example.webteam.R.array;
 import org.example.webteam.R.drawable;
 import org.example.webteam.R.id;
 import org.example.webteam.R.layout;
-import org.example.webteam.boitemanager.boite.BoiteDeMessage;
-import org.example.webteam.boitemanager.boite.BoiteDeMessageLecture;
-import org.example.webteam.boitemanager.message.Message;
-import org.example.webteam.boitemanager.message.messageprive.MessagePrive;
-import org.example.webteam.eleve.FicheEleve;
-import org.example.webteam.loggin.Root;
 
-import potoman.tools.L;
-import potoman.webteam.bdd.BddMessageManager;
-import potoman.webteam.bdd.BddMessagePriveManager;
-import potoman.webteam.constant.Webteam;
-import potoman.webteam.exception.ExceptionLireMessagePrive;
+import com.potoman.tools.L;
+import com.potoman.webteam.bdd.BddMessageManager;
+import com.potoman.webteam.bdd.BddMessagePriveManager;
+import com.potoman.webteam.boitemanager.boite.BoiteDeMessage;
+import com.potoman.webteam.boitemanager.boite.BoiteDeMessageLecture;
+import com.potoman.webteam.boitemanager.message.Message;
+import com.potoman.webteam.boitemanager.message.messageprive.MessagePrive;
+import com.potoman.webteam.constant.Webteam;
+import com.potoman.webteam.eleve.FicheEleve;
+import com.potoman.webteam.exception.ExceptionLireMessagePrive;
+import com.potoman.webteam.loggin.Root;
+import com.potoman.webteam.task.ATGetMessagePrive;
+import com.potoman.webteam.task.ATSupprimerMessagePrive;
+import com.potoman.webteam.task.IWorkFinishOfAsyncTask;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;

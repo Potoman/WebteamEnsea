@@ -1,4 +1,4 @@
-package org.example.webteam.caligula;
+package com.potoman.webteam.caligula;
 
 import java.util.ArrayList;
 import java.util.List;

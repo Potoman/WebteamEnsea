@@ -1,7 +1,7 @@
-package org.example.webteam.boitemanager.message;
+package com.potoman.webteam.boitemanager.message;
 
-import potoman.tools.L;
-import potoman.webteam.bdd.BddMessageManager;
+import com.potoman.tools.L;
+import com.potoman.webteam.bdd.BddMessageManager;
 
 public abstract class Message {
 

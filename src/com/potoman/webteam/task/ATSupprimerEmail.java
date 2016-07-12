@@ -1,4 +1,4 @@
-package org.example.task;
+package com.potoman.webteam.task;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -7,10 +7,10 @@ import java.util.List;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.example.webteam.boitemanager.boite.BoiteDeMessage;
 
-import potoman.tools.CallService;
-import potoman.tools.L;
+import com.potoman.tools.CallService;
+import com.potoman.tools.L;
+import com.potoman.webteam.boitemanager.boite.BoiteDeMessage;
 
 import android.content.Context;
 import android.os.AsyncTask;

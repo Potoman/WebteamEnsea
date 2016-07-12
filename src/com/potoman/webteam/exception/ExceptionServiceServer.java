@@ -1,4 +1,4 @@
-package potoman.webteam.exception;
+package com.potoman.webteam.exception;
 
 import android.content.Context;
 

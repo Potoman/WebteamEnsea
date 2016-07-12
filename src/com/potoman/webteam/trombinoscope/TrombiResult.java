@@ -1,17 +1,18 @@
-package org.example.webteam.trombinoscope;
+package com.potoman.webteam.trombinoscope;
 
 import org.example.webteam.R;
 import org.example.webteam.R.id;
 import org.example.webteam.R.layout;
 import org.example.webteam.R.menu;
-import org.example.webteam.eleve.EleveManager;
-import org.example.webteam.eleve.FicheEleve;
-import org.example.webteam.eleve.ContactWebteam;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import potoman.tools.L;
+import com.potoman.tools.L;
+import com.potoman.webteam.eleve.ContactWebteam;
+import com.potoman.webteam.eleve.EleveManager;
+import com.potoman.webteam.eleve.FicheEleve;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;

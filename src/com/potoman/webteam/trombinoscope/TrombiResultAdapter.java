@@ -1,4 +1,4 @@
-package org.example.webteam.trombinoscope;
+package com.potoman.webteam.trombinoscope;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,9 +6,10 @@ import java.util.List;
 import org.example.webteam.R;
 import org.example.webteam.R.id;
 import org.example.webteam.R.layout;
-import org.example.webteam.eleve.ContactWebteam;
 
-import potoman.tools.L;
+import com.potoman.tools.L;
+import com.potoman.webteam.eleve.ContactWebteam;
+
 import android.content.Context;
 import android.graphics.Color;
 import android.view.LayoutInflater;

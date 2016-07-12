@@ -1,7 +1,6 @@
-package org.example.webteam.clubphoto.activity;
+package com.potoman.webteam.clubphoto.activity;
 
 import org.example.webteam.R;
-import org.example.webteam.clubphoto.activity.Constants.Extra;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -20,6 +19,7 @@ import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
+import com.potoman.webteam.clubphoto.activity.Constants.Extra;
 
 /**
  * @author Sergey Tarasevich (nostra13[at]gmail[dot]com)

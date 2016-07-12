@@ -1,4 +1,4 @@
-package org.example.webteam.loggin.deleteprofil;
+package com.potoman.webteam.loggin.deleteprofil;
 
 import java.util.List;
 
@@ -6,10 +6,11 @@ import org.example.webteam.R;
 import org.example.webteam.R.id;
 import org.example.webteam.R.layout;
 import org.example.webteam.R.menu;
-import org.example.webteam.eleve.ContactWebteam;
 import org.json.JSONArray;
 
-import potoman.webteam.bdd.contact.BddContactManager;
+import com.potoman.webteam.bdd.contact.BddContactManager;
+import com.potoman.webteam.eleve.ContactWebteam;
+
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;

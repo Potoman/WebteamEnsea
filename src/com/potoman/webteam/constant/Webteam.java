@@ -1,10 +1,10 @@
-package potoman.webteam.constant;
+package com.potoman.webteam.constant;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import org.example.webteam.ragot.Ragot;
+import com.potoman.webteam.ragot.Ragot;
 
 import android.net.Uri;
 

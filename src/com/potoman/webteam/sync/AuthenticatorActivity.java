@@ -1,8 +1,9 @@
-package org.example.webteam.sync;
+package com.potoman.webteam.sync;
 
 import org.example.webteam.R;
 
-import potoman.tools.L;
+import com.potoman.tools.L;
+
 import android.accounts.Account;
 import android.accounts.AccountAuthenticatorActivity;
 import android.accounts.AccountManager;

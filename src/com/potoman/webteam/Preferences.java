@@ -1,4 +1,4 @@
-package org.example.webteam;
+package com.potoman.webteam;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -16,16 +16,18 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.client.DefaultRedirectHandler;
 import org.apache.http.protocol.BasicHttpContext;
 import org.apache.http.protocol.HttpContext;
-import org.example.webteam.caligula.Caligula;
-import org.example.webteam.caligula.UrlCaligula;
+import org.example.webteam.R;
 
-import potoman.tools.CallService;
-import potoman.tools.L;
-import potoman.tools.ManipOnTime;
-import potoman.tools.ObjectToDay;
-import potoman.webteam.bdd.BddUrlCaligulaManager;
-import potoman.webteam.constant.Webteam;
-import potoman.webteam.exception.ExceptionResponseHttpNull;
+import com.potoman.tools.CallService;
+import com.potoman.tools.L;
+import com.potoman.tools.ManipOnTime;
+import com.potoman.tools.ObjectToDay;
+import com.potoman.webteam.bdd.BddUrlCaligulaManager;
+import com.potoman.webteam.caligula.Caligula;
+import com.potoman.webteam.caligula.UrlCaligula;
+import com.potoman.webteam.constant.Webteam;
+import com.potoman.webteam.exception.ExceptionResponseHttpNull;
+
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;

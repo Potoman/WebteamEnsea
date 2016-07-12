@@ -1,4 +1,4 @@
-package potoman.webteam.bdd;
+package com.potoman.webteam.bdd;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -6,8 +6,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import potoman.webteam.bdd.data.FolderClubPhoto;
-import potoman.webteam.bdd.data.UrlImgClubPhoto;
+import com.potoman.webteam.bdd.data.FolderClubPhoto;
+import com.potoman.webteam.bdd.data.UrlImgClubPhoto;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;

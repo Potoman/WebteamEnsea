@@ -1,12 +1,12 @@
-package potoman.webteam.bdd;
+package com.potoman.webteam.bdd;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.example.webteam.loggin.Root;
-import org.example.webteam.ragot.Ragot;
+import com.potoman.tools.L;
+import com.potoman.webteam.loggin.Root;
+import com.potoman.webteam.ragot.Ragot;
 
-import potoman.tools.L;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;

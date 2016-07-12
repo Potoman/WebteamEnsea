@@ -1,4 +1,4 @@
-package org.example.webteam.ragot;
+package com.potoman.webteam.ragot;
 
 import java.util.ArrayList;
 import java.util.List;

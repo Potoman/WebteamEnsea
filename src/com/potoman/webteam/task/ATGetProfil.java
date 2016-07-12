@@ -1,4 +1,4 @@
-package org.example.task;
+package com.potoman.webteam.task;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -6,17 +6,17 @@ import java.util.Date;
 import java.util.List;
 
 import org.example.webteam.R;
-import org.example.webteam.eleve.FicheEleve;
-import org.example.webteam.eleve.ContactWebteam;
-import org.example.webteam.ragot.Ragot;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import potoman.tools.CallService;
-import potoman.tools.L;
-import potoman.tools.UrlService;
-import potoman.webteam.constant.Webteam;
-import potoman.webteam.exception.ExceptionService;
+import com.potoman.tools.CallService;
+import com.potoman.tools.L;
+import com.potoman.tools.UrlService;
+import com.potoman.webteam.constant.Webteam;
+import com.potoman.webteam.eleve.ContactWebteam;
+import com.potoman.webteam.eleve.FicheEleve;
+import com.potoman.webteam.exception.ExceptionService;
+import com.potoman.webteam.ragot.Ragot;
 
 import android.content.Context;
 import android.os.AsyncTask;

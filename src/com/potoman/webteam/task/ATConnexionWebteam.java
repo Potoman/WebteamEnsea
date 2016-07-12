@@ -1,13 +1,14 @@
-package org.example.task;
+package com.potoman.webteam.task;
 
-import org.example.task.ATConnexionWebteam.RetourConnexion;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import potoman.tools.CallService;
-import potoman.tools.L;
-import potoman.tools.UrlService;
-import potoman.webteam.exception.ExceptionService;
+import com.potoman.tools.CallService;
+import com.potoman.tools.L;
+import com.potoman.tools.UrlService;
+import com.potoman.webteam.exception.ExceptionService;
+import com.potoman.webteam.task.ATConnexionWebteam.RetourConnexion;
+
 import android.content.Context;
 import android.os.AsyncTask;
 

@@ -1,4 +1,4 @@
-package org.example.webteam.clubphoto;
+package com.potoman.webteam.clubphoto;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,7 +7,8 @@ import java.util.Map;
 
 import org.example.webteam.R;
 
-import potoman.webteam.bdd.data.FolderClubPhoto;
+import com.potoman.webteam.bdd.data.FolderClubPhoto;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;

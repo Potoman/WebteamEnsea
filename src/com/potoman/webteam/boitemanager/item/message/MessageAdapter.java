@@ -1,11 +1,11 @@
-package org.example.webteam.boitemanager.item.message;
+package com.potoman.webteam.boitemanager.item.message;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.example.webteam.boitemanager.message.Message;
+import com.potoman.tools.L;
+import com.potoman.webteam.boitemanager.message.Message;
 
-import potoman.tools.L;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;

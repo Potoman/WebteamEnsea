@@ -1,14 +1,15 @@
-package org.example.webteam.boitemanager.boite.messageprive;
+package com.potoman.webteam.boitemanager.boite.messageprive;
 
-import org.example.task.ATSendMessagePrive;
-import org.example.task.IWorkFinishOfAsyncTask;
 import org.example.webteam.R;
 import org.example.webteam.R.array;
 import org.example.webteam.R.id;
 import org.example.webteam.R.layout;
 
-import potoman.tools.L;
-import potoman.webteam.constant.Webteam;
+import com.potoman.tools.L;
+import com.potoman.webteam.constant.Webteam;
+import com.potoman.webteam.task.ATSendMessagePrive;
+import com.potoman.webteam.task.IWorkFinishOfAsyncTask;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;

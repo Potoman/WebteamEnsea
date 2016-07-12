@@ -1,4 +1,4 @@
-package org.example.webteam.boitemanager;
+package com.potoman.webteam.boitemanager;
 
 public class Squirrel {
 	

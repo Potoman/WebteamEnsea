@@ -1,4 +1,4 @@
-package org.example.webteam.favoris;
+package com.potoman.webteam.favoris;
 
 import org.example.webteam.R;
 import org.example.webteam.R.drawable;

@@ -1,26 +1,27 @@
-package org.example.webteam.ragot;
+package com.potoman.webteam.ragot;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-import org.example.task.ATGetRagot;
-import org.example.task.IWorkFinishOfAsyncTask;
 import org.example.webteam.R;
-import org.example.webteam.TempData;
-import org.example.webteam.eleve.FicheEleve;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import potoman.tools.CallService;
-import potoman.tools.IObserver;
-import potoman.tools.L;
-import potoman.tools.UrlService;
-import potoman.webteam.bdd.BddRagotManager;
-import potoman.webteam.bdd.BddUriManager;
-import potoman.webteam.constant.Webteam;
-import potoman.webteam.exception.ExceptionService;
+import com.potoman.tools.CallService;
+import com.potoman.tools.IObserver;
+import com.potoman.tools.L;
+import com.potoman.tools.UrlService;
+import com.potoman.webteam.TempData;
+import com.potoman.webteam.bdd.BddRagotManager;
+import com.potoman.webteam.bdd.BddUriManager;
+import com.potoman.webteam.constant.Webteam;
+import com.potoman.webteam.eleve.FicheEleve;
+import com.potoman.webteam.exception.ExceptionService;
+import com.potoman.webteam.task.ATGetRagot;
+import com.potoman.webteam.task.IWorkFinishOfAsyncTask;
+
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;

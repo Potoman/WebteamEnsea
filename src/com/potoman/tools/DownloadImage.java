@@ -1,4 +1,4 @@
-package potoman.tools;
+package com.potoman.tools;
 
 import java.io.FilterInputStream;
 import java.io.IOException;

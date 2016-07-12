@@ -1,4 +1,4 @@
-package potoman.webteam.bdd.data;
+package com.potoman.webteam.bdd.data;
 
 public class UrlImgClubPhoto {
 

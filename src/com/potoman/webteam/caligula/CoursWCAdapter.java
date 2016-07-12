@@ -1,5 +1,5 @@
 
-package org.example.webteam.caligula;
+package com.potoman.webteam.caligula;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -8,9 +8,10 @@ import java.util.List;
 import org.example.webteam.R;
 import org.example.webteam.R.id;
 import org.example.webteam.R.layout;
-import org.example.webteam.ragot.RagotAdapter;
 
-import potoman.tools.L;
+import com.potoman.tools.L;
+import com.potoman.webteam.ragot.RagotAdapter;
+
 import android.content.Context;
 import android.graphics.Color;
 import android.util.SparseBooleanArray;

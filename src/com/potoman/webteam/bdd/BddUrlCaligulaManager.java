@@ -1,12 +1,11 @@
 
-package potoman.webteam.bdd;
+package com.potoman.webteam.bdd;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.example.webteam.caligula.UrlCaligula;
-
-import potoman.tools.L;
+import com.potoman.tools.L;
+import com.potoman.webteam.caligula.UrlCaligula;
 
 import android.content.ContentValues;
 import android.content.Context;

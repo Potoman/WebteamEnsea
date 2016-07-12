@@ -1,28 +1,29 @@
-package org.example.webteam.anniversaire;
+package com.potoman.webteam.anniversaire;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
 import org.example.webteam.R;
-import org.example.webteam.TempData;
 import org.example.webteam.R.array;
 import org.example.webteam.R.id;
 import org.example.webteam.R.layout;
 import org.example.webteam.R.menu;
-import org.example.webteam.eleve.FicheEleve;
-import org.example.webteam.eleve.ContactWebteam;
-import org.example.webteam.loggin.Root;
-import org.example.webteam.trombinoscope.TrombiResultAdapter;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import potoman.tools.CallService;
-import potoman.tools.L;
-import potoman.tools.UrlService;
-import potoman.webteam.constant.Webteam;
-import potoman.webteam.exception.ExceptionService;
+import com.potoman.tools.CallService;
+import com.potoman.tools.L;
+import com.potoman.tools.UrlService;
+import com.potoman.webteam.TempData;
+import com.potoman.webteam.constant.Webteam;
+import com.potoman.webteam.eleve.ContactWebteam;
+import com.potoman.webteam.eleve.FicheEleve;
+import com.potoman.webteam.exception.ExceptionService;
+import com.potoman.webteam.loggin.Root;
+import com.potoman.webteam.trombinoscope.TrombiResultAdapter;
+
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;

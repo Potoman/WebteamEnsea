@@ -1,4 +1,4 @@
-package org.example.webteam.favoris;
+package com.potoman.webteam.favoris;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,15 +6,16 @@ import java.util.List;
 import org.example.webteam.R;
 import org.example.webteam.R.id;
 import org.example.webteam.R.layout;
-import org.example.webteam.eleve.FicheEleve;
-import org.example.webteam.ragot.Ragot;
-import org.example.webteam.ragot.RagotAdapter;
-import org.example.webteam.ragot.RagotManager;
 
-import potoman.tools.L;
-import potoman.webteam.bdd.BddRagotManager;
-import potoman.webteam.bdd.BddUriManager;
-import potoman.webteam.constant.Webteam;
+import com.potoman.tools.L;
+import com.potoman.webteam.bdd.BddRagotManager;
+import com.potoman.webteam.bdd.BddUriManager;
+import com.potoman.webteam.constant.Webteam;
+import com.potoman.webteam.eleve.FicheEleve;
+import com.potoman.webteam.ragot.Ragot;
+import com.potoman.webteam.ragot.RagotAdapter;
+import com.potoman.webteam.ragot.RagotManager;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;

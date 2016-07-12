@@ -1,4 +1,4 @@
-package org.example.webteam.ragot;
+package com.potoman.webteam.ragot;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -7,11 +7,12 @@ import java.util.List;
 import org.example.webteam.R;
 import org.example.webteam.R.drawable;
 import org.example.webteam.R.menu;
-import org.example.webteam.eleve.FicheEleve;
 
-import potoman.tools.L;
-import potoman.webteam.bdd.BddRagotManager;
-import potoman.webteam.bdd.BddUriManager;
+import com.potoman.tools.L;
+import com.potoman.webteam.bdd.BddRagotManager;
+import com.potoman.webteam.bdd.BddUriManager;
+import com.potoman.webteam.eleve.FicheEleve;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;

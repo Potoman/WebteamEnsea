@@ -1,4 +1,4 @@
-package org.example.webteam.boitemanager.boite;
+package com.potoman.webteam.boitemanager.boite;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,19 +12,19 @@ import java.util.Set;
 import java.util.concurrent.ExecutionException;
 
 import org.apache.http.protocol.RequestContent;
-import org.example.task.ATGetBoiteSquirrel;
-import org.example.task.IWorkFinishOfAsyncTask;
 import org.example.webteam.R;
-import org.example.webteam.TempData;
-import org.example.webteam.boitemanager.item.boite.BoiteDeMessageAdapter;
-import org.example.webteam.boitemanager.item.boite.ItemBoiteDeMessage;
-import org.example.webteam.boitemanager.item.message.MessageAdapter;
-import org.example.webteam.boitemanager.message.Message;
 
-import potoman.tools.IObserver;
-import potoman.tools.L;
-import potoman.webteam.bdd.BddMessageManager;
-import potoman.webteam.constant.Webteam;
+import com.potoman.tools.IObserver;
+import com.potoman.tools.L;
+import com.potoman.webteam.TempData;
+import com.potoman.webteam.bdd.BddMessageManager;
+import com.potoman.webteam.boitemanager.item.boite.BoiteDeMessageAdapter;
+import com.potoman.webteam.boitemanager.item.boite.ItemBoiteDeMessage;
+import com.potoman.webteam.boitemanager.item.message.MessageAdapter;
+import com.potoman.webteam.boitemanager.message.Message;
+import com.potoman.webteam.constant.Webteam;
+import com.potoman.webteam.task.ATGetBoiteSquirrel;
+import com.potoman.webteam.task.IWorkFinishOfAsyncTask;
 
 import android.app.Activity;
 import android.app.ProgressDialog;

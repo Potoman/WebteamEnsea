@@ -1,20 +1,19 @@
-package potoman.webteam.bdd;
+package com.potoman.webteam.bdd;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.example.webteam.boitemanager.Squirrel;
-import org.example.webteam.boitemanager.boite.BoiteDeMessage;
-import org.example.webteam.boitemanager.boite.messageprive.BoiteDeMessagePrive;
-import org.example.webteam.boitemanager.message.Message;
-import org.example.webteam.boitemanager.message.email.Email;
-import org.example.webteam.boitemanager.message.messageprive.MessagePrive;
-import org.example.webteam.loggin.Root;
-
-import potoman.tools.L;
-import potoman.webteam.constant.Webteam;
+import com.potoman.tools.L;
+import com.potoman.webteam.boitemanager.Squirrel;
+import com.potoman.webteam.boitemanager.boite.BoiteDeMessage;
+import com.potoman.webteam.boitemanager.boite.messageprive.BoiteDeMessagePrive;
+import com.potoman.webteam.boitemanager.message.Message;
+import com.potoman.webteam.boitemanager.message.email.Email;
+import com.potoman.webteam.boitemanager.message.messageprive.MessagePrive;
+import com.potoman.webteam.constant.Webteam;
+import com.potoman.webteam.loggin.Root;
 
 import android.content.ContentValues;
 import android.content.Context;

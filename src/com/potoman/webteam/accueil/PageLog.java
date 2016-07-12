@@ -1,17 +1,18 @@
-package org.example.webteam.accueil;
+package com.potoman.webteam.accueil;
 
-import org.example.webteam.Preferences;
 import org.example.webteam.R;
-import org.example.webteam.anniversaire.Anniversaire;
-import org.example.webteam.boitemanager.boite.messageprive.BoiteDeMessagePrive;
-import org.example.webteam.eleve.SupprimerPhotoProfil;
-import org.example.webteam.favoris.TabFavoris;
-import org.example.webteam.ragot.Ragots;
-import org.example.webteam.trombinoscope.Trombinoscope;
 
-import potoman.tools.CallService;
-import potoman.tools.L;
-import potoman.webteam.exception.ExceptionService;
+import com.potoman.tools.CallService;
+import com.potoman.tools.L;
+import com.potoman.webteam.Preferences;
+import com.potoman.webteam.anniversaire.Anniversaire;
+import com.potoman.webteam.boitemanager.boite.messageprive.BoiteDeMessagePrive;
+import com.potoman.webteam.eleve.SupprimerPhotoProfil;
+import com.potoman.webteam.exception.ExceptionService;
+import com.potoman.webteam.favoris.TabFavoris;
+import com.potoman.webteam.ragot.Ragots;
+import com.potoman.webteam.trombinoscope.Trombinoscope;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;

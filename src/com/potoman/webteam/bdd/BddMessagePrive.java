@@ -1,4 +1,4 @@
-package potoman.webteam.bdd;
+package com.potoman.webteam.bdd;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

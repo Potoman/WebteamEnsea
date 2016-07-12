@@ -1,9 +1,9 @@
-package potoman.tools;
+package com.potoman.tools;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import org.example.webteam.loggin.Root;
+import com.potoman.webteam.loggin.Root;
 
 
 public class UrlService {

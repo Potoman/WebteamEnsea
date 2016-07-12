@@ -1,12 +1,12 @@
-package org.example.webteam.sync.contact;
+package com.potoman.webteam.sync.contact;
 
 import java.util.List;
 
-import org.example.webteam.eleve.ContactWebteam;
+import com.potoman.tools.L;
+import com.potoman.webteam.bdd.contact.BddContact;
+import com.potoman.webteam.bdd.contact.BddContactManager;
+import com.potoman.webteam.eleve.ContactWebteam;
 
-import potoman.tools.L;
-import potoman.webteam.bdd.contact.BddContact;
-import potoman.webteam.bdd.contact.BddContactManager;
 import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.content.Context;

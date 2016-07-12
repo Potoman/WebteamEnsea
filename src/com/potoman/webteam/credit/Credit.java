@@ -1,4 +1,4 @@
-package org.example.webteam.credit;
+package com.potoman.webteam.credit;
 
 import org.example.webteam.R;
 import org.example.webteam.R.layout;

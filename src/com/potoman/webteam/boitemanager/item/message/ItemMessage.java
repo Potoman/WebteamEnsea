@@ -1,6 +1,6 @@
-package org.example.webteam.boitemanager.item.message;
+package com.potoman.webteam.boitemanager.item.message;
 
-import org.example.webteam.boitemanager.message.Message;
+import com.potoman.webteam.boitemanager.message.Message;
 
 import android.view.LayoutInflater;
 import android.view.View;

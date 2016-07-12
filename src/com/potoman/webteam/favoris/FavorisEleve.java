@@ -1,4 +1,4 @@
-package org.example.webteam.favoris;
+package com.potoman.webteam.favoris;
 
 import java.util.List;
 
@@ -6,12 +6,13 @@ import org.example.webteam.R;
 import org.example.webteam.R.id;
 import org.example.webteam.R.layout;
 import org.example.webteam.R.menu;
-import org.example.webteam.eleve.EleveManager;
-import org.example.webteam.eleve.FicheEleve;
-import org.example.webteam.eleve.ContactWebteam;
-import org.example.webteam.trombinoscope.TrombiResultAdapter;
 
-import potoman.webteam.bdd.contact.BddContactManager;
+import com.potoman.webteam.bdd.contact.BddContactManager;
+import com.potoman.webteam.eleve.ContactWebteam;
+import com.potoman.webteam.eleve.EleveManager;
+import com.potoman.webteam.eleve.FicheEleve;
+import com.potoman.webteam.trombinoscope.TrombiResultAdapter;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;

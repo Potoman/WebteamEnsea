@@ -1,4 +1,4 @@
-package org.example.webteam.boitemanager.boite.email;
+package com.potoman.webteam.boitemanager.boite.email;
 
 import java.util.List;
 import java.util.Map;
@@ -6,19 +6,19 @@ import java.util.Map.Entry;
 import java.util.concurrent.ExecutionException;
 
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.example.task.ATConnexionSquirrel;
-import org.example.task.ATGetBoiteSquirrel;
-import org.example.task.ATGetListeBoiteSquirrel;
-import org.example.task.IWorkFinishOfAsyncTask;
 import org.example.webteam.R;
-import org.example.webteam.boitemanager.Squirrel;
-import org.example.webteam.boitemanager.boite.BoiteDeMessage;
-import org.example.webteam.boitemanager.message.Message;
 
-import potoman.tools.CallService;
-import potoman.tools.L;
-import potoman.webteam.bdd.BddSquirrelManager;
-import potoman.webteam.constant.Webteam;
+import com.potoman.tools.CallService;
+import com.potoman.tools.L;
+import com.potoman.webteam.bdd.BddSquirrelManager;
+import com.potoman.webteam.boitemanager.Squirrel;
+import com.potoman.webteam.boitemanager.boite.BoiteDeMessage;
+import com.potoman.webteam.boitemanager.message.Message;
+import com.potoman.webteam.constant.Webteam;
+import com.potoman.webteam.task.ATConnexionSquirrel;
+import com.potoman.webteam.task.ATGetBoiteSquirrel;
+import com.potoman.webteam.task.ATGetListeBoiteSquirrel;
+import com.potoman.webteam.task.IWorkFinishOfAsyncTask;
 
 import android.content.Context;
 import android.content.Intent;

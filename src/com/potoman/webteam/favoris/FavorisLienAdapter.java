@@ -1,4 +1,4 @@
-package org.example.webteam.favoris;
+package com.potoman.webteam.favoris;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,8 @@ import org.example.webteam.R;
 import org.example.webteam.R.id;
 import org.example.webteam.R.layout;
 
-import potoman.tools.L;
+import com.potoman.tools.L;
+
 import android.content.Context;
 import android.net.Uri;
 import android.util.SparseBooleanArray;

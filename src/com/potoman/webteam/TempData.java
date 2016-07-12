@@ -1,13 +1,14 @@
-package org.example.webteam;
+package com.potoman.webteam;
 
 
 import java.util.List;
 
-import org.example.task.ATGetProfil;
-import org.example.webteam.boitemanager.item.boite.ItemBoiteDeMessage;
-import org.example.webteam.boitemanager.message.Message;
-import org.example.webteam.eleve.ContactWebteam;
 import org.json.JSONObject;
+
+import com.potoman.webteam.boitemanager.item.boite.ItemBoiteDeMessage;
+import com.potoman.webteam.boitemanager.message.Message;
+import com.potoman.webteam.eleve.ContactWebteam;
+import com.potoman.webteam.task.ATGetProfil;
 
 import android.os.AsyncTask;
 

@@ -1,9 +1,8 @@
-package org.example.webteam.boitemanager.message.messageprive;
+package com.potoman.webteam.boitemanager.message.messageprive;
 
-import org.example.webteam.boitemanager.message.Message;
-
-import potoman.tools.L;
-import potoman.webteam.bdd.BddMessageManager;
+import com.potoman.tools.L;
+import com.potoman.webteam.bdd.BddMessageManager;
+import com.potoman.webteam.boitemanager.message.Message;
 
 public class MessagePrive extends Message {
 

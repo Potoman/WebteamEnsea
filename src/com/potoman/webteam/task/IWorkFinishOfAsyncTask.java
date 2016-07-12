@@ -1,4 +1,4 @@
-package org.example.task;
+package com.potoman.webteam.task;
 
 public interface IWorkFinishOfAsyncTask {
 

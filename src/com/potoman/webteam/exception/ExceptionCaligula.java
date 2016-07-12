@@ -1,4 +1,4 @@
-package potoman.webteam.exception;
+package com.potoman.webteam.exception;
 
 public class ExceptionCaligula extends Exception {
 

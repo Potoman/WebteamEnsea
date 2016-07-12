@@ -1,4 +1,4 @@
-package potoman.tools;
+package com.potoman.tools;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -29,8 +29,9 @@ import org.apache.http.protocol.HTTP;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import potoman.webteam.exception.ExceptionServiceConnected;
-import potoman.webteam.exception.ExceptionServiceServer;
+import com.potoman.webteam.exception.ExceptionServiceConnected;
+import com.potoman.webteam.exception.ExceptionServiceServer;
+
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -218,7 +219,7 @@ public class CallService {
 		maString = maString.replace("¾", "&#190;");
 		maString = maString.replace("¿", "&#191;");
 		maString = maString.replace("À", "&#192;");
-		maString = maString.replace("Á", "&#193;");
+		maString = maString.replace("�?", "&#193;");
 		maString = maString.replace("Â", "&#194;");
 		maString = maString.replace("Ã", "&#195;");
 		maString = maString.replace("Ä", "&#196;");
@@ -230,10 +231,10 @@ public class CallService {
 		maString = maString.replace("Ê", "&#202;");
 		maString = maString.replace("Ë", "&#203;");
 		maString = maString.replace("Ì", "&#204;");
-		maString = maString.replace("Í", "&#205;");
+		maString = maString.replace("�?", "&#205;");
 		maString = maString.replace("Î", "&#206;");
-		maString = maString.replace("Ï", "&#207;");
-		maString = maString.replace("Ð", "&#208;");
+		maString = maString.replace("�?", "&#207;");
+		maString = maString.replace("�?", "&#208;");
 		maString = maString.replace("Ñ", "&#209;");
 		maString = maString.replace("Ò", "&#210;");
 		maString = maString.replace("Ó", "&#211;");
@@ -246,7 +247,7 @@ public class CallService {
 		maString = maString.replace("Ú", "&#218;");
 		maString = maString.replace("Û", "&#219;");
 		maString = maString.replace("Ü", "&#220;");
-		maString = maString.replace("Ý", "&#221;");
+		maString = maString.replace("�?", "&#221;");
 		maString = maString.replace("Þ", "&#222;");
 		maString = maString.replace("ß", "&#223;");
 		maString = maString.replace("à", "&#224;");
@@ -293,7 +294,7 @@ public class CallService {
 		maString = maString.replace("’", "&#8217;");
 		maString = maString.replace("‚", "&#8218;");
 		maString = maString.replace("“", "&#8220;");
-		maString = maString.replace("”", "&#8221;");
+		maString = maString.replace("�?", "&#8221;");
 		maString = maString.replace("„", "&#8222;");
 		maString = maString.replace("†", "&#8224;");
 		maString = maString.replace("‡", "&#8225;");
@@ -342,7 +343,7 @@ public static String replaceAccentHtmlToText(String maString) {
 		maString = maString.replace("&#190;", "¾");
 		maString = maString.replace("&#191;", "¿");
 		maString = maString.replace("&#192;", "À");
-		maString = maString.replace("&#193;", "Á");
+		maString = maString.replace("&#193;", "�?");
 		maString = maString.replace("&#194;", "Â");
 		maString = maString.replace("&#195;", "Ã");
 		maString = maString.replace("&#196;", "Ä");
@@ -354,10 +355,10 @@ public static String replaceAccentHtmlToText(String maString) {
 		maString = maString.replace("&#202;", "Ê");
 		maString = maString.replace("&#203;", "Ë");
 		maString = maString.replace("&#204;", "Ì");
-		maString = maString.replace("&#205;", "Í");
+		maString = maString.replace("&#205;", "�?");
 		maString = maString.replace("&#206;", "Î");
-		maString = maString.replace("&#207;", "Ï");
-		maString = maString.replace("&#208;", "Ð");
+		maString = maString.replace("&#207;", "�?");
+		maString = maString.replace("&#208;", "�?");
 		maString = maString.replace("&#209;", "Ñ");
 		maString = maString.replace("&#210;", "Ò");
 		maString = maString.replace("&#211;", "Ó");
@@ -370,7 +371,7 @@ public static String replaceAccentHtmlToText(String maString) {
 		maString = maString.replace("&#218;", "Ú");
 		maString = maString.replace("&#219;", "Û");
 		maString = maString.replace("&#220;", "Ü");
-		maString = maString.replace("&#221;", "Ý");
+		maString = maString.replace("&#221;", "�?");
 		maString = maString.replace("&#222;", "Þ");
 		maString = maString.replace("&#223;", "ß");
 		maString = maString.replace("&#224;", "à");
@@ -417,7 +418,7 @@ public static String replaceAccentHtmlToText(String maString) {
 		maString = maString.replace("&#8217;", "’");
 		maString = maString.replace("&#8218;", "‚");
 		maString = maString.replace("&#8220;", "“");
-		maString = maString.replace("&#8221;", "”");
+		maString = maString.replace("&#8221;", "�?");
 		maString = maString.replace("&#8222;", "„");
 		maString = maString.replace("&#8224;", "†");
 		maString = maString.replace("&#8225;", "‡");

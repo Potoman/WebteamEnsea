@@ -1,11 +1,12 @@
-package org.example.webteam.eleve;
+package com.potoman.webteam.eleve;
 
 import org.example.webteam.R;
 import org.example.webteam.R.array;
 import org.example.webteam.R.id;
 import org.example.webteam.R.layout;
 
-import potoman.webteam.constant.Webteam;
+import com.potoman.webteam.constant.Webteam;
+
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.app.ProgressDialog;

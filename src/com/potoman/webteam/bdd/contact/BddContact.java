@@ -1,4 +1,4 @@
-package potoman.webteam.bdd.contact;
+package com.potoman.webteam.bdd.contact;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

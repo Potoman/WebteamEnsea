@@ -1,4 +1,4 @@
-package org.example.webteam.data;
+package com.potoman.webteam.data;
 
 public enum KeyPreference {
 	STRING_PSEUDO(String.class, "Pseudo"),

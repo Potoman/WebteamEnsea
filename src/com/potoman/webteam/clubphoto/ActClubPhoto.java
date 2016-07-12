@@ -1,4 +1,4 @@
-package org.example.webteam.clubphoto;
+package com.potoman.webteam.clubphoto;
 
 import java.util.List;
 import java.util.Map;
@@ -6,22 +6,23 @@ import java.util.concurrent.ExecutionException;
 
 import org.apache.http.client.HttpClient;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.example.task.clubphoto.ATConnexionClubPhoto;
-import org.example.task.clubphoto.ATGetAllCategoryClubPhoto;
-import org.example.task.clubphoto.ATGetCategoryClubPhoto;
 import org.example.webteam.R;
-import org.example.webteam.clubphoto.activity.Constants.Extra;
-import org.example.webteam.clubphoto.activity.ImageGridActivity;
-import org.example.webteam.ragot.Ragots;
 
-import potoman.tools.CallService;
-import potoman.tools.IObserver;
-import potoman.tools.L;
-import potoman.webteam.bdd.BddFolderClubPhotoManager;
-import potoman.webteam.bdd.BddUrlImgClubPhotoManager;
-import potoman.webteam.bdd.data.FolderClubPhoto;
-import potoman.webteam.bdd.data.UrlImgClubPhoto;
-import potoman.webteam.constant.Webteam;
+import com.potoman.tools.CallService;
+import com.potoman.tools.IObserver;
+import com.potoman.tools.L;
+import com.potoman.webteam.bdd.BddFolderClubPhotoManager;
+import com.potoman.webteam.bdd.BddUrlImgClubPhotoManager;
+import com.potoman.webteam.bdd.data.FolderClubPhoto;
+import com.potoman.webteam.bdd.data.UrlImgClubPhoto;
+import com.potoman.webteam.clubphoto.activity.ImageGridActivity;
+import com.potoman.webteam.clubphoto.activity.Constants.Extra;
+import com.potoman.webteam.constant.Webteam;
+import com.potoman.webteam.ragot.Ragots;
+import com.potoman.webteam.task.clubphoto.ATConnexionClubPhoto;
+import com.potoman.webteam.task.clubphoto.ATGetAllCategoryClubPhoto;
+import com.potoman.webteam.task.clubphoto.ATGetCategoryClubPhoto;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;

@@ -1,5 +1,5 @@
 
-package org.example.webteam.caligula;
+package com.potoman.webteam.caligula;
 
 public class UrlCaligula {
 	

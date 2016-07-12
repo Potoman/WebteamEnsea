@@ -1,5 +1,7 @@
 # WebteamEnsea
 
+This application provide to Ensea's student, the Webteam's service and administrative's service like calendar and webmail.
+
 This project show to the Student how my application is made.
 
 This soft is the first I made for public. And my skill at this time is... Not very good ^^

@@ -1,8 +1,9 @@
-package org.example.webteam.eleve;
+package com.potoman.webteam.eleve;
 
 import java.io.File;
 
-import potoman.tools.L;
+import com.potoman.tools.L;
+
 import android.content.Context;
 import android.graphics.BitmapFactory;
 import android.view.View;

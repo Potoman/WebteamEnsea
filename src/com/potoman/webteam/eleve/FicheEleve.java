@@ -1,6 +1,6 @@
 
 
-package org.example.webteam.eleve;
+package com.potoman.webteam.eleve;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -13,18 +13,19 @@ import java.util.Observer;
 import java.util.Set;
 import java.util.concurrent.ExecutionException;
 
-import org.example.task.ATGetProfil;
-import org.example.task.IWorkFinishOfAsyncTask;
 import org.example.webteam.R;
-import org.example.webteam.sync.contact.ContactProvider;
 import org.json.JSONObject;
 
-import potoman.tools.CallService;
-import potoman.tools.DownloadImage;
-import potoman.tools.L;
-import potoman.webteam.bdd.contact.BddContactManager;
-import potoman.webteam.constant.Webteam;
-import potoman.webteam.exception.ExceptionService;
+import com.potoman.tools.CallService;
+import com.potoman.tools.DownloadImage;
+import com.potoman.tools.L;
+import com.potoman.webteam.bdd.contact.BddContactManager;
+import com.potoman.webteam.constant.Webteam;
+import com.potoman.webteam.exception.ExceptionService;
+import com.potoman.webteam.sync.contact.ContactProvider;
+import com.potoman.webteam.task.ATGetProfil;
+import com.potoman.webteam.task.IWorkFinishOfAsyncTask;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;

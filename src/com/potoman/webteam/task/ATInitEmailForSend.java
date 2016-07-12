@@ -1,4 +1,4 @@
-package org.example.task;
+package com.potoman.webteam.task;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -12,10 +12,11 @@ import java.util.regex.Pattern;
 import org.apache.http.HttpResponse;
 import org.apache.http.impl.client.DefaultHttpClient;
 
-import potoman.tools.CallService;
-import potoman.tools.IObserver;
-import potoman.tools.L;
-import potoman.tools.Ref;
+import com.potoman.tools.CallService;
+import com.potoman.tools.IObserver;
+import com.potoman.tools.L;
+import com.potoman.tools.Ref;
+
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;

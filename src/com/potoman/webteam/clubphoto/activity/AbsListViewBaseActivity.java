@@ -1,4 +1,4 @@
-package org.example.webteam.clubphoto.activity;
+package com.potoman.webteam.clubphoto.activity;
 
 
 import org.example.webteam.R;

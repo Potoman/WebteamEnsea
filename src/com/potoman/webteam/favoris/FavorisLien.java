@@ -1,4 +1,4 @@
-package org.example.webteam.favoris;
+package com.potoman.webteam.favoris;
 
 import java.util.List;
 
@@ -7,8 +7,9 @@ import org.example.webteam.R.id;
 import org.example.webteam.R.layout;
 import org.example.webteam.R.menu;
 
-import potoman.webteam.bdd.BddUriManager;
-import potoman.webteam.constant.Webteam;
+import com.potoman.webteam.bdd.BddUriManager;
+import com.potoman.webteam.constant.Webteam;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;

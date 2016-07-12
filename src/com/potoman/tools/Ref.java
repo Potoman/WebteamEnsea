@@ -1,4 +1,4 @@
-package potoman.tools;
+package com.potoman.tools;
 
 public class Ref<T> {
 	T t = null;

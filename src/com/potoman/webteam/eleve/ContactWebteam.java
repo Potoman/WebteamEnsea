@@ -1,4 +1,4 @@
-package org.example.webteam.eleve;
+package com.potoman.webteam.eleve;
 
 import java.util.ArrayList;
 import java.util.HashMap;

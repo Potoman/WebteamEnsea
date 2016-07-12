@@ -1,4 +1,4 @@
-package org.example.webteam;
+package com.potoman.webteam;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -9,9 +9,10 @@ import java.net.URL;
 import java.net.URLConnection;
 
 import org.apache.http.util.ByteArrayBuffer;
-import org.example.webteam.loggin.Root;
 
-import potoman.tools.L;
+import com.potoman.tools.L;
+import com.potoman.webteam.loggin.Root;
+
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Build;

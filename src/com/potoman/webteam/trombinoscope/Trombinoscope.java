@@ -1,23 +1,24 @@
-package org.example.webteam.trombinoscope;
+package com.potoman.webteam.trombinoscope;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.example.webteam.Preferences;
 import org.example.webteam.R;
 import org.example.webteam.R.array;
 import org.example.webteam.R.id;
 import org.example.webteam.R.layout;
 import org.example.webteam.R.menu;
-import org.example.webteam.loggin.Root;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import potoman.tools.CallService;
-import potoman.tools.L;
-import potoman.tools.UrlService;
-import potoman.webteam.constant.Webteam;
-import potoman.webteam.exception.ExceptionService;
+import com.potoman.tools.CallService;
+import com.potoman.tools.L;
+import com.potoman.tools.UrlService;
+import com.potoman.webteam.Preferences;
+import com.potoman.webteam.constant.Webteam;
+import com.potoman.webteam.exception.ExceptionService;
+import com.potoman.webteam.loggin.Root;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -265,27 +266,6 @@ public class Trombinoscope extends Activity implements OnClickListener {
 					uiThreadCallback.post(new Runnable() {public void run() {Toast.makeText(Trombinoscope.this, e.toString(), Toast.LENGTH_SHORT).show();}});
 					e.printStackTrace();
 				}       					
-       			/*try {
-					reponseJSON = new JSONObject(
-"{\"erreur\":1, \"page\":\"trombinoscope\", \"contenu\":" +
-"[{\"id\":1537, " +
-"\"pseudo\":\"Potoman\"," +
-"\"nom\":\"Gir\"," +
-"\"prenom\":\"Maxime\"," +
-"\"email\":\"lepotoman@msn.com\"," +
-"\"telephone\":\"0112121212\"," +
-"\"telephoneFixe\":\"0112121212\"," +
-"\"telephoneParent\":\"0112121212\"," +
-"\"classe\":\"3A ESE\"}," +
-"{\"id\":1537, \"pseudo\":\"Pmlkjoman\",\"nom\":\"Moche\",\"prenom\":\"Remoche\",\"email\":\"lmmmmmmmm n@msn.com\"" +
-",\"telephone\":\"0112121212\",\"telephoneFixe\":\"0112121212\",\"telephoneParent\":\"0112121212\",\"classe\"" +
-":\"4A ESE\"},{\"id\":1537, \"pseudo\":\"Sjhgjhg\",\"nom\":\"Girard\",\"prenom\":\"Max\",\"email\":\"leplllllman@msn.com\",\"telephone\":\"0112121212\",\"telephoneFixe\":\"0112121212\",\"telephoneParent\":\"0112121212\"," +
-"\"classe\":\"5A ESE\"}]}");
-					reponseJSON = new JSONObject("{\"erreur\":1, \"page\":\"trombinoscope\"}");
-					
-				} catch (JSONException e) {
-					L.v("Trombinoscope", "Cheat !");
-				}*/
 				L.v("Trombinoscope", "Pass !");
        			uiThreadCallback.post(new Runnable() {public void run() {resultatTrombinoscope();}});
 	       	    myProgressDialog.dismiss();

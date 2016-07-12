@@ -1,14 +1,14 @@
-package potoman.webteam.bdd;
+package com.potoman.webteam.bdd;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import org.example.webteam.boitemanager.boite.BoiteDeMessage;
-import org.example.webteam.boitemanager.boite.messageprive.BoiteDeMessagePrive;
-import org.example.webteam.boitemanager.message.Message;
-import org.example.webteam.boitemanager.message.messageprive.MessagePrive;
-import org.example.webteam.loggin.Root;
+import com.potoman.webteam.boitemanager.boite.BoiteDeMessage;
+import com.potoman.webteam.boitemanager.boite.messageprive.BoiteDeMessagePrive;
+import com.potoman.webteam.boitemanager.message.Message;
+import com.potoman.webteam.boitemanager.message.messageprive.MessagePrive;
+import com.potoman.webteam.loggin.Root;
 
 import android.content.ContentValues;
 import android.database.Cursor;

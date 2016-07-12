@@ -1,4 +1,4 @@
-package org.example.webteam.eleve;
+package com.potoman.webteam.eleve;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,8 @@ import java.util.List;
 import org.example.webteam.R;
 import org.example.webteam.R.id;
 import org.example.webteam.R.menu;
-import org.example.webteam.trombinoscope.TrombiResultAdapter;
+
+import com.potoman.webteam.trombinoscope.TrombiResultAdapter;
 
 import android.app.Activity;
 import android.view.Menu;

@@ -1,16 +1,16 @@
-package org.example.webteam.boitemanager.message.email;
+package com.potoman.webteam.boitemanager.message.email;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.example.webteam.boitemanager.message.Message;
-import org.example.webteam.loggin.Root;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import potoman.tools.L;
-import potoman.webteam.bdd.BddMessageManager;
+import com.potoman.tools.L;
+import com.potoman.webteam.bdd.BddMessageManager;
+import com.potoman.webteam.boitemanager.message.Message;
+import com.potoman.webteam.loggin.Root;
 
 public class Email extends Message {
 	

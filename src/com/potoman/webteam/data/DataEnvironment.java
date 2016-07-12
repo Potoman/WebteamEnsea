@@ -1,6 +1,7 @@
-package org.example.webteam.data;
+package com.potoman.webteam.data;
 
-import potoman.tools.L;
+import com.potoman.tools.L;
+
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.util.Log;
