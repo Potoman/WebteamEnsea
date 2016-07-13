@@ -4,32 +4,26 @@ import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.example.webteam.R;
-import org.example.webteam.R.id;
-import org.example.webteam.R.layout;
 
 import com.potoman.tools.CallService;
 import com.potoman.tools.IObserver;
 import com.potoman.tools.L;
-import com.potoman.tools.Ref;
+import com.potoman.webteam.R;
 import com.potoman.webteam.boitemanager.Squirrel;
 import com.potoman.webteam.boitemanager.boite.BoiteDeMessage;
 import com.potoman.webteam.constant.Webteam;
 import com.potoman.webteam.task.ATConnexionSquirrel;
 import com.potoman.webteam.task.ATInitEmailForSend;
 import com.potoman.webteam.task.ATSendEmail;
-import com.potoman.webteam.task.ATSendMessagePrive;
-import com.potoman.webteam.task.IWorkFinishOfAsyncTask;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.util.Log;
-import android.view.View;
-import android.view.Window;
-import android.view.View.OnClickListener;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;

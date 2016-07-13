@@ -2,11 +2,8 @@ package com.potoman.webteam.anniversaire;
 
 import java.util.List;
 
-import org.example.webteam.R;
-import org.example.webteam.R.id;
-import org.example.webteam.R.layout;
-
 import com.potoman.tools.L;
+import com.potoman.webteam.R;
 import com.potoman.webteam.eleve.ContactWebteam;
 
 import android.content.Context;

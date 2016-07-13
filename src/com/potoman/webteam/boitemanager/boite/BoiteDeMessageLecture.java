@@ -2,10 +2,9 @@ package com.potoman.webteam.boitemanager.boite;
 
 import java.util.concurrent.ExecutionException;
 
-import org.example.webteam.R;
-
 import com.potoman.tools.IObserver;
 import com.potoman.tools.L;
+import com.potoman.webteam.R;
 import com.potoman.webteam.TempData;
 import com.potoman.webteam.bdd.BddMessageManager;
 import com.potoman.webteam.boitemanager.boite.messageprive.BoiteDeMessagePrive;
@@ -17,12 +16,9 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.database.Observable;
 import android.os.AsyncTask;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View.OnClickListener;
-import android.view.Window;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.Toast;

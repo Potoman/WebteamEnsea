@@ -2,44 +2,29 @@ package com.potoman.webteam.boitemanager.boite.messageprive;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
-
-import org.example.webteam.R;
-import org.example.webteam.R.array;
-import org.example.webteam.R.drawable;
-import org.example.webteam.R.id;
-import org.example.webteam.R.layout;
 
 import com.potoman.tools.L;
-import com.potoman.webteam.bdd.BddMessageManager;
+import com.potoman.webteam.R;
 import com.potoman.webteam.bdd.BddMessagePriveManager;
-import com.potoman.webteam.boitemanager.boite.BoiteDeMessage;
 import com.potoman.webteam.boitemanager.boite.BoiteDeMessageLecture;
 import com.potoman.webteam.boitemanager.message.Message;
 import com.potoman.webteam.boitemanager.message.messageprive.MessagePrive;
 import com.potoman.webteam.constant.Webteam;
 import com.potoman.webteam.eleve.FicheEleve;
-import com.potoman.webteam.exception.ExceptionLireMessagePrive;
-import com.potoman.webteam.loggin.Root;
 import com.potoman.webteam.task.ATGetMessagePrive;
 import com.potoman.webteam.task.ATSupprimerMessagePrive;
-import com.potoman.webteam.task.IWorkFinishOfAsyncTask;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.DialogInterface.OnCancelListener;
-import android.net.Uri;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
-import android.view.View.OnClickListener;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;

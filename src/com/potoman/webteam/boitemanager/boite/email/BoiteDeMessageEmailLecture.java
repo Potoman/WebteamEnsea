@@ -1,17 +1,12 @@
 package com.potoman.webteam.boitemanager.boite.email;
 
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.example.webteam.R;
-import org.example.webteam.R.array;
-import org.example.webteam.R.drawable;
-import org.example.webteam.R.id;
-import org.example.webteam.R.layout;
 
 import com.potoman.tools.CallService;
 import com.potoman.tools.L;
 import com.potoman.tools.Ref;
+import com.potoman.webteam.R;
 import com.potoman.webteam.bdd.BddSquirrelManager;
-import com.potoman.webteam.boitemanager.boite.BoiteDeMessage;
 import com.potoman.webteam.boitemanager.boite.BoiteDeMessageLecture;
 import com.potoman.webteam.boitemanager.message.Message;
 import com.potoman.webteam.boitemanager.message.email.Email;
@@ -26,16 +21,14 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.DialogInterface.OnCancelListener;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
-import android.webkit.WebSettings.LayoutAlgorithm;
 import android.webkit.WebView;
 import android.widget.TextView;
 import android.widget.Toast;

@@ -1,8 +1,6 @@
 package com.potoman.webteam.boitemanager.item.message;
 
-import org.example.webteam.R;
-
-import com.potoman.tools.L;
+import com.potoman.webteam.R;
 import com.potoman.webteam.boitemanager.message.Message;
 
 import android.graphics.Typeface;

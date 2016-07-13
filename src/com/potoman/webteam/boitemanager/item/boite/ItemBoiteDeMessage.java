@@ -2,8 +2,7 @@ package com.potoman.webteam.boitemanager.item.boite;
 
 import java.util.List;
 
-import org.example.webteam.R;
-
+import com.potoman.webteam.R;
 import com.potoman.webteam.boitemanager.message.Message;
 
 import android.graphics.Typeface;

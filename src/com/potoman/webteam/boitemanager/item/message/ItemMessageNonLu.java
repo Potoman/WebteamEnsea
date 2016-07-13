@@ -1,15 +1,11 @@
 package com.potoman.webteam.boitemanager.item.message;
 
-import org.example.webteam.R;
-import org.example.webteam.R.id;
-import org.example.webteam.R.layout;
-
 import com.potoman.tools.L;
+import com.potoman.webteam.R;
 import com.potoman.webteam.boitemanager.message.Message;
 
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class ItemMessageNonLu extends ItemMessage {

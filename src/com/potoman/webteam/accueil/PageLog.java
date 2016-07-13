@@ -1,10 +1,9 @@
 package com.potoman.webteam.accueil;
 
-import org.example.webteam.R;
-
 import com.potoman.tools.CallService;
 import com.potoman.tools.L;
 import com.potoman.webteam.Preferences;
+import com.potoman.webteam.R;
 import com.potoman.webteam.anniversaire.Anniversaire;
 import com.potoman.webteam.boitemanager.boite.messageprive.BoiteDeMessagePrive;
 import com.potoman.webteam.eleve.SupprimerPhotoProfil;

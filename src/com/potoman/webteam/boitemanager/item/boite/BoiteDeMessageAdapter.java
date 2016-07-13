@@ -2,10 +2,7 @@ package com.potoman.webteam.boitemanager.item.boite;
 
 import java.util.List;
 
-import org.example.webteam.R;
-import org.example.webteam.R.id;
-
-import com.potoman.tools.L;
+import com.potoman.webteam.R;
 import com.potoman.webteam.boitemanager.message.Message;
 
 import android.content.Context;

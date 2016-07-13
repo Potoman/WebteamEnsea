@@ -1,7 +1,6 @@
 package com.potoman.webteam;
 
 import java.io.BufferedInputStream;
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,7 +14,6 @@ import com.potoman.webteam.loggin.Root;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Environment;
 
 public class DownloadMAJ extends AsyncTask<Root, Void, String> {
