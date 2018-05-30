@@ -47,16 +47,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Anniversaire extends Activity implements OnItemClickListener, OnTouchListener {
-	JSONObject reponseJSON = null;
-	ListView myList;
-	TextView tvDateCurrently;
-	LinearLayout llAnniversaire;
+
+	private ListView myList;
+	private TextView tvDateCurrently;
+	private LinearLayout llAnniversaire;
 	
 	TrombiResultAdapter adapter = null;			//J'utilise la m�me liste que le trombi.
-	TmpAnniversaire mData = null;
+	private final TmpAnniversaire mToday = new TmpAnniversaire();
 	ProgressDialog myProgressDialog;
 	final Handler uiThreadCallback = new Handler();
-	static List<ContactWebteam> maListeDeProfil = new ArrayList<ContactWebteam>();
+	private final List<ContactWebteam> maListeDeProfil = new ArrayList<ContactWebteam>();
 	private int mLag = 0;
 	
 	//For changing date :
@@ -101,7 +101,7 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
                     mMonth = monthOfYear + 1;
                     mDay = dayOfMonth;
                     
-                    mData = null;
+                    mToday = null;
                     getAnniversaire();
                 }
             };
@@ -137,8 +137,8 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
 		adapter.notifyDataSetChanged();
 	    
 	    L.v("Anniversaire", "onCreate");
-        mData = getLastNonConfigurationInstance();
-        if (mData == null) {
+        mToday = getLastNonConfigurationInstance();
+        if (mToday == null) {
         	final Calendar c = Calendar.getInstance();
             mYear = c.get(Calendar.YEAR);
             mMonth = c.get(Calendar.MONTH) + 1;
@@ -155,7 +155,6 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
     @Override
     public Object onRetainNonConfigurationInstance() {
         TempData temp = new TempData();
-        temp.tempReponseJSON = reponseJSON;
         temp.lag = mLag;
         temp.year = mYear;
         temp.month = mMonth;
@@ -169,30 +168,37 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
 		nameData.add("demain");
 		List<String> valeurData = new ArrayList<String>();
 		valeurData.add("" + mLag);
-		if (mData == null)
+		if (mToday == null)
 			threadJSON(0, UrlService.createUrlAnniversaire(
 					PreferenceManager.getDefaultSharedPreferences(this).getString(Webteam.PSEUDO, ""),
 					PreferenceManager.getDefaultSharedPreferences(this).getString(Webteam.PASSWORD, "")
 					)
 					, getResources().getStringArray(R.array.waitingAnniversaire)[0], Webteam.getPhraseDAmbiance(), nameData, valeurData);
 		else {
-			reponseJSON = mData.tempReponseJSON;
-			mLag = mData.lag;
-			mYear = mData.year;
-			mMonth = mData.month;
-			mDay = mData.day;
+			mLag = mToday.lag;
+			mYear = mToday.year;
+			mMonth = mToday.month;
+			mDay = mToday.day;
 			resultatAnniversaire();
 		}
     }
 
     private class TmpAnniversaire {
+
 		public int lag = 0;
-		public int year = 0;
-		public int month = 0;
-		public int day = 0;
-		public JSONObject tempReponseJSON = null;
+		public int mYear = 0;
+		public int mMonth = 0;
+		public int mDay = 0;
+
+		public TmpAnniversaire() {
+			final Calendar c = Calendar.getInstance();
+			mYear = c.get(Calendar.YEAR);
+			mMonth = c.get(Calendar.MONTH) + 1;
+			mDay = c.get(Calendar.DAY_OF_MONTH);
+		}
+
 	}
-	
+
 	public void threadJSON(final int redirection, final String url, String titleProgressDialog, String messageProgressDialog, final List<String> nameData, final List<String> valeurData) {//JSONObject en retour normalement.
 		L.v("Anniversaire", "threadJSON");
 		myProgressDialog = ProgressDialog.show(Anniversaire.this, titleProgressDialog, messageProgressDialog, true, true, new OnCancelListener() {
@@ -203,7 +209,9 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
        		@Override
        		public void run() {
        			try {
-					reponseJSON = CallService.getJsonPost(Anniversaire.this, url, nameData, valeurData);
+					JSONObject responseJSON = CallService.getJsonPost(Anniversaire.this, url, nameData, valeurData);
+					maListeDeProfil.clear();
+					maListeDeProfil.addAll(parse(responseJSON));
 				} catch (final ExceptionService e) {
 					reponseJSON = null;
 					uiThreadCallback.post(new Runnable() {public void run() {Toast.makeText(Anniversaire.this, e.toString(), Toast.LENGTH_SHORT).show();}});
@@ -215,7 +223,21 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
        	    }
        	}.start();
 	}
-	
+
+	private static final String CONTENU ="contenu";
+	private static final String ERREUR ="erreur";
+
+	private static List<ContactWebteam> parse(JSONObject response) throws JSONException {
+		erreur = (Integer) reponseJSON.getInt("erreur");
+		if (erreur == 0) {
+			// No anniversaire
+			return new ArrayList<>();
+		}
+		else {
+			return ContactWebteam.parse(json.getJSONArray(CONTENU));
+		}
+	}
+
 	void resultatAnniversaire() {
 		L.v("Anniversaire", "resultatAnniversaire");
 		if (reponseJSON == null) {
@@ -223,9 +245,9 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
 			finish();
 		}
 		else {
-			int erreur = 0;
 			try {
-				erreur = (Integer) reponseJSON.getInt("erreur");
+				maListeDeProfil.clear();
+				maListeDeProfil.addAll(parse(reponseJSON));
 	    		afficherAnniversaire();
 			} catch (JSONException e) {
 				e.printStackTrace();
@@ -244,22 +266,16 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
 	}
 
 	public void remplirAnniversaire() {
-		L.v("Anniversaire", "remplirAnniversaire");
-		maListeDeProfil.clear();
 		try {
-			int index = 0;
-			JSONArray arrayListeDesProfils = reponseJSON.getJSONArray(CONTENU);
-				while (!arrayListeDesProfils.isNull(index)) {
-					JSONObject jObj = arrayListeDesProfils.getJSONObject(index);
-					maListeDeProfil.add(new ContactWebteam(jObj));
-					index++;
-				}
+			L.v("Anniversaire", "remplirAnniversaire");
+			maListeDeProfil.clear();
+			maListeDeProfil.addAll(ContactWebteam.parse(reponseJSON));
 		} catch (JSONException e) {
 			e.printStackTrace();
-		}		
-		adapter.synchNewProfil();
+		} finally {
+			adapter.synchNewProfil();
+		}
 	}
-	
 
 	public void afficherAnniversaire() {
 		tvDateCurrently.setText("Anniversaire pour le jour du : " + mDay + "/" + mMonth + "/" + mYear);
@@ -390,7 +406,7 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
             			}
             		}
                 		L.v("Anniversaire", "Previous : day " + mDay + ", month " + mMonth + ", mYear" + mYear);
-                    mData = null;
+                    mToday = null;
                     getAnniversaire();
                 }
 
@@ -410,7 +426,7 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
                 			mYear = 2000;
                 		}
 
-                    mData = null;
+                    mToday = null;
                     getAnniversaire();		
                 }
                 break;

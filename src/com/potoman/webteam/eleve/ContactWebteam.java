@@ -2,7 +2,7 @@ package com.potoman.webteam.eleve;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
+import java.util.List;
 
 
 public class ContactWebteam {
@@ -36,7 +36,6 @@ public class ContactWebteam {
 	}
 
 	private static final String ID="id";
-	private static final String CONTENU ="contenu";
 	private static final String PSEUDO ="pseudo";
 	private static final String NOM ="nom";
 	private static final String PRENOM ="prenom";
@@ -46,8 +45,8 @@ public class ContactWebteam {
 	private static final String TELEPHONE_PARENT ="telephoneParent";
 	private static final String CLASSE ="classe";
 
-	public ContactWebteam(JSONObject jObj) {
-		this(jObj.getInt(ID),
+	public static ContactWebteam parse(JSONObject jObj) {
+		return new ContactWebteam(jObj.getInt(ID),
 				jObj.getString(PSEUDO),
 				jObj.getString(NOM),
 				jObj.getString(PRENOM),
@@ -74,6 +73,18 @@ public class ContactWebteam {
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
+	}
+
+	public static List<ContactWebteam> parse(JSONArray array) {
+		int index = 0;
+		List<ContactWebteam> tmpArr = new ArrayList<>();
+		//JSONArray arrayListeDesProfils = reponseJSON.getJSONArray(CONTENU);
+		while (!array.isNull(index)) {
+			JSONObject jObj = array.getJSONObject(index);
+			tmpArr.add(parse(jObj));
+			index++;
+		}
+		return tmpArr;
 	}
 
 	public String getPseudo() {
