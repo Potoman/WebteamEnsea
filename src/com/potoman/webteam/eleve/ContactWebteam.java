@@ -34,7 +34,30 @@ public class ContactWebteam {
 	public ContactWebteam(int id) {
 		this.id = id;
 	}
-	
+
+	private static final String ID="id";
+	private static final String CONTENU ="contenu";
+	private static final String PSEUDO ="pseudo";
+	private static final String NOM ="nom";
+	private static final String PRENOM ="prenom";
+	private static final String EMAIL ="email";
+	private static final String TELEPHONE ="telephone";
+	private static final String TELEPHONE_FIXE ="telephoneFixe";
+	private static final String TELEPHONE_PARENT ="telephoneParent";
+	private static final String CLASSE ="classe";
+
+	public ContactWebteam(JSONObject jObj) {
+		this(jObj.getInt(ID),
+				jObj.getString(PSEUDO),
+				jObj.getString(NOM),
+				jObj.getString(PRENOM),
+				jObj.getString(EMAIL),
+				jObj.getString(TELEPHONE),
+				jObj.getString(TELEPHONE_FIXE),
+				jObj.getString(TELEPHONE_PARENT),
+				jObj.getString(CLASSE));
+	}
+
 	public ContactWebteam(int id, String pseudo, String nom, String prenom, String email, String telephone, String telephoneFixe, String telephoneParent, String classe) {
 		this.id = id;
 		this.pseudo = pseudo;

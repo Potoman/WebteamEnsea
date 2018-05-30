@@ -53,11 +53,11 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
 	LinearLayout llAnniversaire;
 	
 	TrombiResultAdapter adapter = null;			//J'utilise la m�me liste que le trombi.
-	Object data = null;
+	TmpAnniversaire mData = null;
 	ProgressDialog myProgressDialog;
 	final Handler uiThreadCallback = new Handler();
 	static List<ContactWebteam> maListeDeProfil = new ArrayList<ContactWebteam>();
-	int lag = 0;
+	private int mLag = 0;
 	
 	//For changing date :
 	private int mYear;
@@ -81,27 +81,27 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
                     int tempMonth = c.get(Calendar.MONTH);
                     int tempDay = c.get(Calendar.DAY_OF_MONTH);
                 	
-                	lag = 0;
+                	mLag = 0;
                 	if (monthOfYear < tempMonth) {
                 		for (int i = monthOfYear; i < tempMonth; i++) {
-                			lag -= lagMonth[i];
+                			mLag -= lagMonth[i];
                 		}
                 	}
                 	else {
                 		for (int i = tempMonth; i < monthOfYear; i++) {
-                			lag += lagMonth[i];
+                			mLag += lagMonth[i];
                 		}
                 	}
                 	
-                	L.v("Anniversaire", "lag (after month) : " + lag);
-                	lag -= tempDay;
-                	lag += dayOfMonth;
-                	L.v("Anniversaire", "lag : " + lag);
+                	L.v("Anniversaire", "mLag (after month) : " + mLag);
+                	mLag -= tempDay;
+                	mLag += dayOfMonth;
+                	L.v("Anniversaire", "mLag : " + mLag);
                     mYear = year;
                     mMonth = monthOfYear + 1;
                     mDay = dayOfMonth;
                     
-                    data = null;
+                    mData = null;
                     getAnniversaire();
                 }
             };
@@ -137,8 +137,8 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
 		adapter.notifyDataSetChanged();
 	    
 	    L.v("Anniversaire", "onCreate");
-        data = getLastNonConfigurationInstance();
-        if (data == null) {
+        mData = getLastNonConfigurationInstance();
+        if (mData == null) {
         	final Calendar c = Calendar.getInstance();
             mYear = c.get(Calendar.YEAR);
             mMonth = c.get(Calendar.MONTH) + 1;
@@ -147,39 +147,51 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
         }
 		getAnniversaire();
 	}
+
+	private TmpAnniversaire getLastNonConfigurationInstance() {
+    	return (TmpAnniversaire) super.getLastNonConfigurationInstance();
+	}
 	
     @Override
     public Object onRetainNonConfigurationInstance() {
         TempData temp = new TempData();
         temp.tempReponseJSON = reponseJSON;
-        temp.lag = lag;
+        temp.lag = mLag;
         temp.year = mYear;
         temp.month = mMonth;
         temp.day = mDay;
         return temp;
     }
 	
-	public void getAnniversaire() {// throws JSONException { //if(MyJsonApp.DEBUG_MODE==true) debug.append("DEBUG () :: dans getRegions()");
+	public void getAnniversaire() {
 		L.v("Anniversaire", "getAnniversaire");
 		List<String> nameData = new ArrayList<String>();
 		nameData.add("demain");
 		List<String> valeurData = new ArrayList<String>();
-		valeurData.add("" + lag);
-		if (data == null)
+		valeurData.add("" + mLag);
+		if (mData == null)
 			threadJSON(0, UrlService.createUrlAnniversaire(
 					PreferenceManager.getDefaultSharedPreferences(this).getString(Webteam.PSEUDO, ""),
 					PreferenceManager.getDefaultSharedPreferences(this).getString(Webteam.PASSWORD, "")
 					)
 					, getResources().getStringArray(R.array.waitingAnniversaire)[0], Webteam.getPhraseDAmbiance(), nameData, valeurData);
 		else {
-			reponseJSON = ((TempData)data).tempReponseJSON;
-			lag = ((TempData)data).lag;
-			mYear = ((TempData)data).year;
-			mMonth = ((TempData)data).month;
-			mDay = ((TempData)data).day;
+			reponseJSON = mData.tempReponseJSON;
+			mLag = mData.lag;
+			mYear = mData.year;
+			mMonth = mData.month;
+			mDay = mData.day;
 			resultatAnniversaire();
 		}
     }
+
+    private class TmpAnniversaire {
+		public int lag = 0;
+		public int year = 0;
+		public int month = 0;
+		public int day = 0;
+		public JSONObject tempReponseJSON = null;
+	}
 	
 	public void threadJSON(final int redirection, final String url, String titleProgressDialog, String messageProgressDialog, final List<String> nameData, final List<String> valeurData) {//JSONObject en retour normalement.
 		L.v("Anniversaire", "threadJSON");
@@ -206,7 +218,11 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
 	
 	void resultatAnniversaire() {
 		L.v("Anniversaire", "resultatAnniversaire");
-		if (reponseJSON != null) {
+		if (reponseJSON == null) {
+			Toast.makeText(this, "Vous n'êtes pas connecté à internet... :S", Toast.LENGTH_LONG).show();
+			finish();
+		}
+		else {
 			int erreur = 0;
 			try {
 				erreur = (Integer) reponseJSON.getInt("erreur");
@@ -225,24 +241,20 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
 	    		adapter.synchNewProfil();
 	    	}
 	    }
-	    else {
-	    	Toast.makeText(this, "Vous n'êtes pas connecté à internet... :S", Toast.LENGTH_LONG).show();
-	    	finish();
-	    }
 	}
-	
+
 	public void remplirAnniversaire() {
 		L.v("Anniversaire", "remplirAnniversaire");
 		maListeDeProfil.clear();
 		try {
 			int index = 0;
-			JSONArray arrayListeDesProfils = reponseJSON.getJSONArray("contenu");
+			JSONArray arrayListeDesProfils = reponseJSON.getJSONArray(CONTENU);
 				while (!arrayListeDesProfils.isNull(index)) {
-					maListeDeProfil.add(new ContactWebteam(arrayListeDesProfils.getJSONObject(index).getInt("id"), arrayListeDesProfils.getJSONObject(index).getString("pseudo"), arrayListeDesProfils.getJSONObject(index).getString("nom"), arrayListeDesProfils.getJSONObject(index).getString("prenom"), arrayListeDesProfils.getJSONObject(index).getString("email"), arrayListeDesProfils.getJSONObject(index).getString("telephone"), arrayListeDesProfils.getJSONObject(index).getString("telephoneFixe"), arrayListeDesProfils.getJSONObject(index).getString("telephoneParent"), arrayListeDesProfils.getJSONObject(index).getString("classe")));
+					JSONObject jObj = arrayListeDesProfils.getJSONObject(index);
+					maListeDeProfil.add(new ContactWebteam(jObj));
 					index++;
 				}
 		} catch (JSONException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}		
 		adapter.synchNewProfil();
@@ -254,14 +266,7 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
 	}
 
 	public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
-		//Intent monIntent = new Intent(this,FicheEleve.class);
 	    adapter.switchOpenClose(position);
-	    /*	for (int i = 0; i < adapter.openIfTrue.size(); i++) {
-	    		if (adapter.openIfTrue.get(i))
-	    			text = text.concat("1");
-	    		else
-	    			text = text.concat("0");
-	    	}*/
 	}
 	
 	@Override
@@ -369,7 +374,7 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
                 if (downXValue + Math.ceil(getWindow().getWindowManager().getDefaultDisplay().getWidth()/3) < currentX)
                 {
                     //Previous
-                	lag--;
+                	mLag--;
                 	mDay--;
             		if (mDay == 0) {
             			if (mMonth == 1) {
@@ -385,7 +390,7 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
             			}
             		}
                 		L.v("Anniversaire", "Previous : day " + mDay + ", month " + mMonth + ", mYear" + mYear);
-                    data = null;
+                    mData = null;
                     getAnniversaire();
                 }
 
@@ -393,7 +398,7 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
                 if (downXValue - Math.ceil(getWindow().getWindowManager().getDefaultDisplay().getWidth()/3) > currentX)
                 {
                     //Next
-                	lag++;
+                	mLag++;
                 	mDay++;
                 		if (mDay > lagMonth[mMonth - 1]) {
                 			mDay = 1;
@@ -405,7 +410,7 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
                 			mYear = 2000;
                 		}
 
-                    data = null;
+                    mData = null;
                     getAnniversaire();		
                 }
                 break;
