@@ -60,9 +60,7 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
 	private int mLag = 0;
 	
 	//For changing date :
-	private int mYear;
-    private int mMonth;
-    private int mDay;
+	private Calendar mCalendar;
 
     static final int DATE_DIALOG_ID = 0;
     
@@ -97,10 +95,9 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
                 	mLag -= tempDay;
                 	mLag += dayOfMonth;
                 	L.v("Anniversaire", "mLag : " + mLag);
-                    mYear = year;
-                    mMonth = monthOfYear + 1;
-                    mDay = dayOfMonth;
                     
+					mCalendar.set(year, month, dayOfMonth);
+					
                     mToday = null;
                     getAnniversaire();
                 }
@@ -112,7 +109,9 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
         case DATE_DIALOG_ID:
             return new DatePickerDialog(this,
                         mDateSetListener,
-                        mYear, mMonth - 1, mDay);
+                        mCalendar.get(Calendar.YEAR),
+						mCalendar.get(Calensar.MONTH),
+						mCalendar.get(Calendar.DAY_OF_MONTH));
         }
         return null;
     }
@@ -176,27 +175,14 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
 					, getResources().getStringArray(R.array.waitingAnniversaire)[0], Webteam.getPhraseDAmbiance(), nameData, valeurData);
 		else {
 			mLag = mToday.lag;
-			mYear = mToday.year;
-			mMonth = mToday.month;
-			mDay = mToday.day;
+			mCalendar = mToday.mCalendar;
 			resultatAnniversaire();
 		}
     }
 
     private class TmpAnniversaire {
-
 		public int lag = 0;
-		public int mYear = 0;
-		public int mMonth = 0;
-		public int mDay = 0;
-
-		public TmpAnniversaire() {
-			final Calendar c = Calendar.getInstance();
-			mYear = c.get(Calendar.YEAR);
-			mMonth = c.get(Calendar.MONTH) + 1;
-			mDay = c.get(Calendar.DAY_OF_MONTH);
-		}
-
+		public Calendar mCalendar = Calendar.getInstance();
 	}
 
 	public void threadJSON(final int redirection, final String url, String titleProgressDialog, String messageProgressDialog, final List<String> nameData, final List<String> valeurData) {//JSONObject en retour normalement.
@@ -224,8 +210,8 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
        	}.start();
 	}
 
-	private static final String CONTENU ="contenu";
-	private static final String ERREUR ="erreur";
+	private static final String CONTENU = "contenu";
+	private static final String ERREUR = "erreur";
 
 	private static List<ContactWebteam> parse(JSONObject response) throws JSONException {
 		erreur = (Integer) reponseJSON.getInt("erreur");
