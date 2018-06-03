@@ -51,20 +51,29 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
 	private ListView myList;
 	private TextView tvDateCurrently;
 	private LinearLayout llAnniversaire;
-	
-	TrombiResultAdapter adapter = null;			//J'utilise la m�me liste que le trombi.
+	private ProgressDialog myProgressDialog;
+
+	private final Handler uiThreadCallback = new Handler();
+
+	private TrombiResultAdapter adapter = null;
 	private final TmpAnniversaire mToday = new TmpAnniversaire();
-	ProgressDialog myProgressDialog;
-	final Handler uiThreadCallback = new Handler();
+
 	private final List<ContactWebteam> maListeDeProfil = new ArrayList<ContactWebteam>();
-	private int mLag = 0;
 	
 	//For changing date :
 	private Calendar mCalendar;
 
     static final int DATE_DIALOG_ID = 0;
-    
-   public  static final int[] lagMonth = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+	private class TmpAnniversaire {
+		public Calendar mCalendar = Calendar.getInstance();
+
+		public void set(TmpAnniversaire ta) {
+			mCalendar = ta.mCalendar;
+		}
+	}
+
+	public static final int[] lagMonth = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     
     private float downXValue; //Used for grabbing
 	
@@ -73,32 +82,9 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
 
                 public void onDateSet(DatePicker view, int year, 
                                       int monthOfYear, int dayOfMonth) {
-                	
-                	final Calendar c = Calendar.getInstance();
-                    //int tempYear = c.get(Calendar.YEAR);
-                    int tempMonth = c.get(Calendar.MONTH);
-                    int tempDay = c.get(Calendar.DAY_OF_MONTH);
-                	
-                	mLag = 0;
-                	if (monthOfYear < tempMonth) {
-                		for (int i = monthOfYear; i < tempMonth; i++) {
-                			mLag -= lagMonth[i];
-                		}
-                	}
-                	else {
-                		for (int i = tempMonth; i < monthOfYear; i++) {
-                			mLag += lagMonth[i];
-                		}
-                	}
-                	
-                	L.v("Anniversaire", "mLag (after month) : " + mLag);
-                	mLag -= tempDay;
-                	mLag += dayOfMonth;
-                	L.v("Anniversaire", "mLag : " + mLag);
                     
-					mCalendar.set(year, month, dayOfMonth);
-					
-                    mToday = null;
+					mCalendar.set(year, monthOfYear, dayOfMonth);
+
                     getAnniversaire();
                 }
             };
@@ -110,7 +96,7 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
             return new DatePickerDialog(this,
                         mDateSetListener,
                         mCalendar.get(Calendar.YEAR),
-						mCalendar.get(Calensar.MONTH),
+						mCalendar.get(Calendar.MONTH),
 						mCalendar.get(Calendar.DAY_OF_MONTH));
         }
         return null;
@@ -129,22 +115,22 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
 		
 	    adapter = new TrombiResultAdapter(getApplicationContext(), maListeDeProfil);
 		
-		myList = (ListView)findViewById(R.id.lvAnniversaire);
+		myList = (ListView) findViewById(R.id.lvAnniversaire);
 	    myList.setAdapter(adapter);
 	    //myList.setOnTouchListener(this);
 	    myList.setOnItemClickListener(this);
 		adapter.notifyDataSetChanged();
 	    
 	    L.v("Anniversaire", "onCreate");
-        mToday = getLastNonConfigurationInstance();
-        if (mToday == null) {
-        	final Calendar c = Calendar.getInstance();
-            mYear = c.get(Calendar.YEAR);
-            mMonth = c.get(Calendar.MONTH) + 1;
-            mDay = c.get(Calendar.DAY_OF_MONTH);
-            //tvDateCurrently.setText(dateCurrently);
-        }
+
+	    getBackInfo();
+
 		getAnniversaire();
+	}
+
+	private void getBackInfo() {
+		TmpAnniversaire tn = getLastNonConfigurationInstance();
+		mToday.set(tn);
 	}
 
 	private TmpAnniversaire getLastNonConfigurationInstance() {
@@ -153,12 +139,7 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
 	
     @Override
     public Object onRetainNonConfigurationInstance() {
-        TempData temp = new TempData();
-        temp.lag = mLag;
-        temp.year = mYear;
-        temp.month = mMonth;
-        temp.day = mDay;
-        return temp;
+        return mToday;
     }
 	
 	public void getAnniversaire() {
@@ -166,26 +147,47 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
 		List<String> nameData = new ArrayList<String>();
 		nameData.add("demain");
 		List<String> valeurData = new ArrayList<String>();
-		valeurData.add("" + mLag);
+		valeurData.add("" + computeLag());
 		if (mToday == null)
-			threadJSON(0, UrlService.createUrlAnniversaire(
-					PreferenceManager.getDefaultSharedPreferences(this).getString(Webteam.PSEUDO, ""),
-					PreferenceManager.getDefaultSharedPreferences(this).getString(Webteam.PASSWORD, "")
-					)
-					, getResources().getStringArray(R.array.waitingAnniversaire)[0], Webteam.getPhraseDAmbiance(), nameData, valeurData);
+			threadJSON(UrlService.createUrlAnniversaire(PreferenceManager.getDefaultSharedPreferences(this).getString(Webteam.PSEUDO, ""),
+							PreferenceManager.getDefaultSharedPreferences(this).getString(Webteam.PASSWORD, "")),
+					getResources().getStringArray(R.array.waitingAnniversaire)[0],
+					Webteam.getPhraseDAmbiance(),
+					nameData,
+					valeurData);
 		else {
-			mLag = mToday.lag;
 			mCalendar = mToday.mCalendar;
 			resultatAnniversaire();
 		}
     }
 
-    private class TmpAnniversaire {
-		public int lag = 0;
-		public Calendar mCalendar = Calendar.getInstance();
+    private int computeLag() {
+    	
+//		final Calendar c = Calendar.getInstance();
+//		//int tempYear = c.get(Calendar.YEAR);
+//		int tempMonth = c.get(Calendar.MONTH);
+//		int tempDay = c.get(Calendar.DAY_OF_MONTH);
+
+//		mLag = 0;
+//		if (monthOfYear < tempMonth) {
+//			for (int i = monthOfYear; i < tempMonth; i++) {
+//				mLag -= lagMonth[i];
+//			}
+//		}
+//		else {
+//			for (int i = tempMonth; i < monthOfYear; i++) {
+//				mLag += lagMonth[i];
+//			}
+//		}
+
+//		L.v("Anniversaire", "mLag (after month) : " + mLag);
+//		mLag -= tempDay;
+//		mLag += dayOfMonth;
+//		L.v("Anniversaire", "mLag : " + mLag);
+		return 0;
 	}
 
-	public void threadJSON(final int redirection, final String url, String titleProgressDialog, String messageProgressDialog, final List<String> nameData, final List<String> valeurData) {//JSONObject en retour normalement.
+	private void threadJSON(final String url, String titleProgressDialog, String messageProgressDialog, final List<String> nameData, final List<String> valeurData) {//JSONObject en retour normalement.
 		L.v("Anniversaire", "threadJSON");
 		myProgressDialog = ProgressDialog.show(Anniversaire.this, titleProgressDialog, messageProgressDialog, true, true, new OnCancelListener() {
 			public void onCancel(DialogInterface dialog) {
@@ -306,118 +308,106 @@ public class Anniversaire extends Activity implements OnItemClickListener, OnTou
 	
 	@Override
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
-		//Intent monIntent = null;
+		List<TrombiResultAdapter.ItemInfo> tmpList = adapter.lstInfoProfil;
 		switch (item.getItemId()) {
 		case R.id.itemToutOuvrir:
 			while (true) {
-				int i;
-				for (i = 0; i < adapter.lstInfoProfil.size(); i++) {
-					if (i == adapter.lstInfoProfil.size() - 1) {
-						//On est au bout...
-						if (adapter.lstInfoProfil.get(i).typeInfo == TrombiResultAdapter.ITEM_NOM_PRENOM) {
-							adapter.switchOpenClose(i);
-							i = -1;
+				int adapterSize = tmpList.size();
+				for (int index = 0; index < adapterSize; index++) {
+					TrombiResultAdapter.ItemInfo ii = tmpList.get(index);
+					if (index == adapterSize - 1) {
+						if (ii.typeInfo == TrombiResultAdapter.ITEM_NOM_PRENOM) {
+							adapter.switchOpenClose(index);
+							return super.onMenuItemSelected(featureId, item);
+						}
+						else {
 							break;
 						}
-						else
-							break;
 					}
-					if (adapter.lstInfoProfil.get(i).typeInfo == TrombiResultAdapter.ITEM_NOM_PRENOM && adapter.lstInfoProfil.get(i + 1).typeInfo == TrombiResultAdapter.ITEM_NOM_PRENOM) {
-						adapter.switchOpenClose(i);
+					if (ii.typeInfo == TrombiResultAdapter.ITEM_NOM_PRENOM && tmpList.get(index + 1).typeInfo == TrombiResultAdapter.ITEM_NOM_PRENOM) {
+						adapter.switchOpenClose(index);
 						break;
 					}
 				}
-				if (i == -1)
-					break;
 			}
 			break;
 		case R.id.itemToutFermer:
 			while (true) {
-				int i;
-				for (i = 0; i < adapter.lstInfoProfil.size(); i++) {
-					if (adapter.lstInfoProfil.get(i).typeInfo != TrombiResultAdapter.ITEM_NOM_PRENOM) {
-						adapter.switchOpenClose(i);
+				int adapterSize = tmpList.size();
+				for (int index = 0; index < adapterSize; index++) {
+					TrombiResultAdapter.ItemInfo ii = tmpList.get(index);
+					if (ii.typeInfo != TrombiResultAdapter.ITEM_NOM_PRENOM) {
+						adapter.switchOpenClose(index);
 						break;
 					}
-					if (i == adapter.lstInfoProfil.size() - 1 && adapter.lstInfoProfil.get(i).typeInfo == TrombiResultAdapter.ITEM_NOM_PRENOM) {
-					i = -1;
-					break;
+					if (index == adapterSize - 1 && ii.typeInfo == TrombiResultAdapter.ITEM_NOM_PRENOM) {
+						return super.onMenuItemSelected(featureId, item);
 					}
 				}
-				if (i == -1)
-					break;
 			}
 			break;
 		case R.id.itemChangerLaDate:
 			showDialog(DATE_DIALOG_ID);
 			break;
 		}
-	return super.onMenuItemSelected(featureId, item);
+		return super.onMenuItemSelected(featureId, item);
 	}
 
 	@Override
 	public boolean onTouch(View arg0, MotionEvent arg1) {
 		L.v("Anniversaire", "onTouch");
-		switch (arg1.getAction())
-        {		
-            case MotionEvent.ACTION_DOWN:
-            {
-                // store the X value when the user's finger was pressed down
-                downXValue = arg1.getX();
-                break;
-            }
+		switch (arg1.getAction()) {
+		case MotionEvent.ACTION_DOWN:
+			// store the X value when the user's finger was pressed down
+			downXValue = arg1.getX();
+			break;
+		case MotionEvent.ACTION_UP:
+			// Get the X value when the user released his/her finger
+			float currentX = arg1.getX();
 
-            case MotionEvent.ACTION_UP:
-            {
-                // Get the X value when the user released his/her finger
-                float currentX = arg1.getX();   
+			// going backwards: pushing stuff to the right
+			if (downXValue + Math.ceil(getWindow().getWindowManager().getDefaultDisplay().getWidth()/3) < currentX) {
+				//Previous
+				mLag--;
+				mDay--;
+				if (mDay == 0) {
+					if (mMonth == 1) {
+						mMonth = 12;
+						mDay = 31;
+					}
+					else {
+						mDay = lagMonth[mMonth - 2];
+						mMonth--;
+					}
+					if (mDay == 29) {
+						mYear = 2000;
+					}
+				}
+					L.v("Anniversaire", "Previous : day " + mDay + ", month " + mMonth + ", mYear" + mYear);
+				mToday = null;
+				getAnniversaire();
+			}
 
-                // going backwards: pushing stuff to the right
-                if (downXValue + Math.ceil(getWindow().getWindowManager().getDefaultDisplay().getWidth()/3) < currentX)
-                {
-                    //Previous
-                	mLag--;
-                	mDay--;
-            		if (mDay == 0) {
-            			if (mMonth == 1) {
-            				mMonth = 12;
-            				mDay = 31;
-            			}
-            			else {
-            				mDay = lagMonth[mMonth - 2];
-            				mMonth--;
-            			}
-            			if (mDay == 29) {
-            				mYear = 2000;
-            			}
-            		}
-                		L.v("Anniversaire", "Previous : day " + mDay + ", month " + mMonth + ", mYear" + mYear);
-                    mToday = null;
-                    getAnniversaire();
-                }
+			// going forwards: pushing stuff to the left
+			if (downXValue - Math.ceil(getWindow().getWindowManager().getDefaultDisplay().getWidth()/3) > currentX) {
+				//Next
+				mLag++;
+				mDay++;
+				if (mDay > lagMonth[mMonth - 1]) {
+					mDay = 1;
+					mMonth++;
+					if (mMonth == 13)
+						mMonth--;
+				}
+				if (mDay == 29 && mMonth == 2) {
+					mYear = 2000;
+				}
 
-                // going forwards: pushing stuff to the left
-                if (downXValue - Math.ceil(getWindow().getWindowManager().getDefaultDisplay().getWidth()/3) > currentX)
-                {
-                    //Next
-                	mLag++;
-                	mDay++;
-                		if (mDay > lagMonth[mMonth - 1]) {
-                			mDay = 1;
-                			mMonth++;
-                			if (mMonth == 13)
-                				mMonth--;
-                		}
-                		if (mDay == 29 && mMonth == 2) {
-                			mYear = 2000;
-                		}
-
-                    mToday = null;
-                    getAnniversaire();		
-                }
-                break;
-            }
-        }
+				mToday = null;
+				getAnniversaire();
+			}
+			break;
+		}
         // if you return false, these actions will not be recorded
         return true;
 	}
